@@ -6,10 +6,10 @@ define('DB_NAME', 'WD03-project-kovtun');
 define('DB_USER', 'root');
 define('DB_PASS', '');
 
-/* путь до корневой директории скрипта по протоколу http */
-define('HOST', $_SERVER['REQUEST_SCHEME'] . '://' . $_SERVER['HTTP_HOST'] . '/');
+/* site settings for emails */
+define('SITE_NAME', 'Личный сайт Людмилы Ковтун');
+define('SITE_EMAIL', 'info@webdev03.com');
+define('ADMIN_EMAIL', 'laudylim@yandex.ru');
 
-/* физический путь до корневой директории скрипта */
-define('ROOT', dirname(__FILE__). '/');
 
 ?>
