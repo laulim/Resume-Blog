@@ -89,6 +89,16 @@ $(document).ready(function() {
 
 	commentCheck.init();
 
+	//:::::::: DELETE AVATAR ::::::::::
+	var deleteAvatar = $('#enter-form').find('#delete-avatar');
+	deleteAvatar.on('click', function(){
+		if ($(deleteAvatar).is(':checked')) {
+			$('#enter-form').find('.file-upload__thumb-delete').fadeIn();	
+		} else {
+			$('#enter-form').find('.file-upload__thumb-delete').fadeOut();	
+		}
+	})
+
 
 
 });

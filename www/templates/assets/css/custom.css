@@ -5,3 +5,25 @@
 	background: -o-linear-gradient(top, #4A8B4A, #1B621B);
 	background: linear-gradient(top, #4A8B4A, #1B621B);
 }
+
+.file-upload__thumb-delete {
+	background-color: rgba(53, 45, 45, 0.7);
+	color: #D7D2D2;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 2;
+	padding-top: 30px;
+	border-radius: 4px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	display: none;
+
+	-webkit-transition: display 0.3s ease-in;
+	-o-transition: display 0.3s ease-in;
+	transition: display 0.3s ease-in;
+}
+

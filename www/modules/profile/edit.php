@@ -22,8 +22,6 @@ if (isset($_POST['profile-update'])) {
 		$user->firstname = htmlentities($_POST['firstname']);
 		$user->lastname = htmlentities($_POST['lastname']);
 		$user->email = htmlentities($_POST['email']);
-		// $user->country = htmlentities($_POST['country']);
-		// $user->city = htmlentities($_POST['city']);
 
 		if (trim($_POST['country']) != '') {
 			$user->country = htmlentities($_POST['country']);
@@ -36,6 +34,8 @@ if (isset($_POST['profile-update'])) {
 		} else if (trim($_POST['city']) == '') {
 			$user->city = NULL;
 		}
+
+		
 
 		if (isset($_FILES['avatar']['name']) && $_FILES['avatar']['tmp_name'] != '') {
 			// write file image params in variables
@@ -107,6 +107,19 @@ if (isset($_POST['profile-update'])) {
 			$user->avatarSmall = "48-" .$db_file_name;
 
 		}
+
+		// Удаление аватарки
+		if (isset($_POST['deleteAvatar'])) {
+			$picUrl = ROOT . 'usercontent/avatar/' . $currentUser->avatar; 
+			unlink($picUrl);
+			$picUrl48 = ROOT . 'usercontent/avatar/' . $currentUser->avatar_small;
+			unlink($picUrl48); 
+
+			$user->avatar = NULL;
+			$user->avatarSmall = NULL;
+		}
+
+		
 
 		R::store($user);
 		$_SESSION['logged_user'] = $user;

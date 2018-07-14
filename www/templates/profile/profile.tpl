@@ -8,6 +8,7 @@
 		// print_r($_SESSION);
 		// echo "</pre>";
 		?>
+
 		<div class="col text-right">
 			<a class="button" href="<?=HOST?>profile-edit">Редактировать</a>
 		</div>

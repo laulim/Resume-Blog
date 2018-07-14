@@ -11,7 +11,6 @@
 			<?php require ROOT. "templates/_parts/errors.tpl" ?>
 		</div>	
 	</div>
-	<!-- <form id="user-data-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" > -->
 	<form id="enter-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
 		<div class="row mb-10 mt-10">
 			<div class="col-4">
@@ -25,7 +24,7 @@
 				<input class="input mb-5" type="text" name="email" placeholder="Введите email" value="<?=$currentUser->email?>" data-required="required" data-text-error="email" />
 			</div>
 		</div>
-		<div class="row mb-20 mt-20">
+		<div class="row mt-20">
 			<div class="col-md-auto">
 				<div class="file-upload">
 					<fieldset>
@@ -37,6 +36,16 @@
 						<label for="#file-1">Выбрать файл</label>
 						<span>Файл не выбран</span>
 					</fieldset>
+					<?php if ($_SESSION['logged_user']['avatar'] != '') { ?>
+						<div class="file-upload__thumb">
+							<img src="<?=HOST?>/usercontent/avatar/<?=$currentUser->avatar?>" />
+							<div class="file-upload__thumb-delete text-center">Аватар <br>будет <br>удален</div>
+							<label class="button button--delete">
+								<input id="delete-avatar" type="checkbox" class="checkbox__input" name="deleteAvatar">
+								Удалить
+							</label>
+						</div>
+					<?php } ?>
 				</div>
 			</div>
 		</div>

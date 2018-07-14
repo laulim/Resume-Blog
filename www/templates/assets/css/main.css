@@ -1159,6 +1159,8 @@ a.user-info__desc:hover {
 .file-upload__thumb {
   position: relative;
   margin-bottom: 20px;
+  border-radius: 4px;
+  overflow: hidden;
 }
 .file-upload .button--delete {
   position: absolute;
