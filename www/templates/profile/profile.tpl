@@ -34,7 +34,9 @@
 				<div class="user-info__desc">
 					<?php if ($currentUser->country != '' && $currentUser->city != '') {
 						echo $currentUser->country . ", " . $currentUser->city;
-					} ?>						
+					} else if ($currentUser->country != '' || $currentUser->city != '') {
+						echo $currentUser->country . $currentUser->city;
+					}?>						
 				</div>
 			</div>
 		</div>

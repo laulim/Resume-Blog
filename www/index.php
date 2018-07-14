@@ -9,6 +9,7 @@ define('ROOT', dirname(__FILE__). '/');
 
 
 $errors = array();
+$success = array();
 
 require ROOT. "config.php";
 require ROOT. "db.php";

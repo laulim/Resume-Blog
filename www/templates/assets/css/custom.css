@@ -1,0 +1,7 @@
+.error--success .error__title {
+	background-color: #168A16;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4A8B4A), to(#1B621B));
+	background: -webkit-linear-gradient(top, #4A8B4A, #1B621B);
+	background: -o-linear-gradient(top, #4A8B4A, #1B621B);
+	background: linear-gradient(top, #4A8B4A, #1B621B);
+}

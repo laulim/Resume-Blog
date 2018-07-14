@@ -2,9 +2,6 @@
 	<script src="<?=HOST?>templates/assets/libs/jquery/jquery.min.js"></script>
 	<!-- endbuild -->
 	<!-- build:jsVendor js/vendor.js -->
-	<script src="<?=HOST?>templates/assets/js/register-form-check.js"></script>
-	<script src="<?=HOST?>templates/assets/js/login-form-check.js"></script>
-	<script src="<?=HOST?>templates/assets/js/comment-check.js"></script>
 	<script src="<?=HOST?>templates/assets/js/custom-file-input.js"></script>
 	<script src="<?=HOST?>templates/assets/js/google-map.js"></script>
 	<!-- endbuild -->

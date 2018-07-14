@@ -1,28 +1,31 @@
 <div class="container pt-40 pb-100">
-	<h1 class="title-1">Редактировать профиль</h1>
+	<h1 class="title-1 mb-10">Редактировать профиль</h1>
 
 	<?php 
 	// echo "<pre>";
 	// print_r($_POST);
 	// echo "</pre>";
 	?>
-	<?php require ROOT. "templates/_parts/errors.tpl" ?>
-
-	<form id="user-data-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
-		<div class="row mb-10">
+	<div class="row">
+		<div class="col-4">
+			<?php require ROOT. "templates/_parts/errors.tpl" ?>
+		</div>	
+	</div>
+	<!-- <form id="user-data-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" > -->
+	<form id="enter-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
+		<div class="row mb-10 mt-10">
 			<div class="col-4">
-				<label class="title-6">Имя
-					<input class="input mt-10 mb-20" type="text" name="firstname" placeholder="Введите имя" value="<?=$currentUser->firstname?>" />
-				</label>
-				<label class="title-6">Фамилия
-					<input class="input mt-10 mb-20" type="text" name="lastname" placeholder="Введите фамилию" value="<?=$currentUser->lastname?>" />
-				</label>
-				<label class="title-6">Email
-					<input class="input mt-10 mb-20" type="email" name="email" placeholder="Введите email" value="<?=$currentUser->email?>" />
-				</label>
+				<div class="title-6 mt-20">Имя</div>
+				<input class="input mb-5" type="text" name="firstname" placeholder="Введите имя" value="<?=$currentUser->firstname?>" data-required="required" data-text-error="имя" />
+				
+				<div class="title-6 mt-20">Фамилия</div>
+				<input class="input mb-5" type="text" name="lastname" placeholder="Введите фамилию" value="<?=$currentUser->lastname?>" data-required="required" data-text-error="фамилию" />
+				
+				<div class="title-6 mt-20">Email</div>
+				<input class="input mb-5" type="text" name="email" placeholder="Введите email" value="<?=$currentUser->email?>" data-required="required" data-text-error="email" />
 			</div>
 		</div>
-		<div class="row mb-20">
+		<div class="row mb-20 mt-20">
 			<div class="col-md-auto">
 				<div class="file-upload">
 					<fieldset>
@@ -39,12 +42,12 @@
 		</div>
 		<div class="row mb-30">
 			<div class="col-4">
-				<label class="title-6">Страна
-					<input class="input mt-10 mb-20" type="text" name="country" placeholder="Введите страну" value="<?=$currentUser->country?>" />
-				</label>
-				<label class="title-6">Город
-					<input class="input mt-10" type="text" name="city" placeholder="Введите город" value="<?=$currentUser->city?>" />
-				</label>
+				<div class="title-6 mt-10 ">Страна</div>
+				<input class="input mb-5" type="text" name="country" placeholder="Введите страну" value="<?=$currentUser->country?>" />
+				
+				<div class="title-6 mt-20">Город</div>
+				<input class="input mb-5" type="text" name="city" placeholder="Введите город" value="<?=$currentUser->city?>" />
+				
 			</div>
 		</div>
 		<div class="row">

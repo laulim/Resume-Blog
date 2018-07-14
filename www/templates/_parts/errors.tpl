@@ -13,6 +13,6 @@
 				<div class="error__desc"><?=$error['desc']?></div>
 			</div>
 <?php
-			}
 		}
-	?>
+	}
+?>
