@@ -2,10 +2,11 @@ $(document).ready(function() {
 	
 	// $(".left-panel").customScrollbar({preventDefaultScroll: true});
 
-	// Попозже удалить лишние файлы....
 	// ::::::::: ENTER FORM VALIDATE ::::::::
 	var validateForm = (function(){
 
+		// Поменять id форм на что-нибкдь более логично-универсальное. Утром...
+		// #form пока занято...
 		var _form = $('#enter-form');
 		var _input = _form.find('input[data-required="required"], textarea[data-required="required"]');
 
@@ -94,8 +95,10 @@ $(document).ready(function() {
 	deleteAvatar.on('click', function(){
 		if ($(deleteAvatar).is(':checked')) {
 			$('#enter-form').find('.file-upload__thumb-delete').fadeIn();	
+			deleteAvatar.next('span').text('Не удалять');
 		} else {
-			$('#enter-form').find('.file-upload__thumb-delete').fadeOut();	
+			$('#enter-form').find('.file-upload__thumb-delete').fadeOut();
+			deleteAvatar.next('span').text('Удалить');
 		}
 	})
 

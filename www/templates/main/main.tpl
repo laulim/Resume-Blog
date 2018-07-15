@@ -2,7 +2,7 @@
 	<div class="row resume">
 		<div class="hidden-xs col-sm-2 col-lg-3 pr-30 pl-30">
 			<div class="avatar ">
-				<img src="<?=HOST?>usercontent/avatar/1270557071.jpg" title="Мила Ковтун" />
+				<img src="<?=HOST?>templates/assets/img/avatars/avatarrrrr.jpg" title="Мила Ковтун" />
 			</div>
 		</div>
 		<div class="col-sm-10 col-lg-9">
@@ -11,7 +11,8 @@
 			<p>Этот сайт я сделал в рамках обучения в школе онлайн обучения WebCademy. <br>Чуть позже я освежу в нём свой контент. А пока посмотрите, как тут всё классно и красиво!</p>
 			<h3 class="title-3">Что я умею</h3>
 			<p>Меня привлекет Frontend разработка, это не только моя работа, но и хобби. Также знаком и могу решать не сложные задачи на Backend.</p>
-			<p class="mb-40">Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p><a class="button" href="<?=HOST?>">Подробнее</a></div>
+			<p class="mb-40">Знаком и использую современный workflow, работаю с репозиториями git и сборкой проекта на gulp.</p><a class="button" href="<?=HOST?>">Подробнее</a>
+		</div>
 	</div>
 </div>
 <div class="hr-line mb-80 mt-80"></div>

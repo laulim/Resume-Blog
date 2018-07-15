@@ -8,6 +8,11 @@ if (isset($_POST['profile-update'])) {
 
 	if (trim($_POST['email']) == '') {
 		$errors[] = ['title' => 'Введите email'];
+	} else if (trim($_POST['email']) !== $currentUser->email) {
+		// Если пароль изменен и уже есть в системе - ошибка
+		if (R::count('users', 'email=?', array($_POST['email'])) > 0) {
+			$errors[] = ['title' => 'Пользователь с таким email уже зарегестрирован'];
+		}
 	}
 
 	if (trim($_POST['firstname']) == '') {
@@ -26,16 +31,14 @@ if (isset($_POST['profile-update'])) {
 		if (trim($_POST['country']) != '') {
 			$user->country = htmlentities($_POST['country']);
 		} else if (trim($_POST['country']) == '') {
-			$user->country = NULL;
+			$user->country = '';
 		}
 
 		if (trim($_POST['city']) != '') {
 			$user->city = htmlentities($_POST['city']);
 		} else if (trim($_POST['city']) == '') {
-			$user->city = NULL;
+			$user->city = '';
 		}
-
-		
 
 		if (isset($_FILES['avatar']['name']) && $_FILES['avatar']['tmp_name'] != '') {
 			// write file image params in variables
@@ -106,20 +109,16 @@ if (isset($_POST['profile-update'])) {
 			
 			$user->avatarSmall = "48-" .$db_file_name;
 
-		}
-
-		// Удаление аватарки
-		if (isset($_POST['deleteAvatar'])) {
+		} else if (isset($_POST['deleteAvatar'])) { // УДАЛЕНИЕ АВАТАРА ПО КНОПОЧКЕ 
+			// Сработает, если нет отправки файла
 			$picUrl = ROOT . 'usercontent/avatar/' . $currentUser->avatar; 
 			unlink($picUrl);
 			$picUrl48 = ROOT . 'usercontent/avatar/' . $currentUser->avatar_small;
 			unlink($picUrl48); 
 
-			$user->avatar = NULL;
-			$user->avatarSmall = NULL;
-		}
-
-		
+			$user->avatar = '';
+			$user->avatarSmall = '';
+		}		
 
 		R::store($user);
 		$_SESSION['logged_user'] = $user;

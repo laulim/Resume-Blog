@@ -5,7 +5,7 @@
 		</div>
 		<?php 
 		// echo "<pre>";
-		// print_r($_SESSION);
+		// print_r($_FILES);
 		// echo "</pre>";
 		?>
 
@@ -33,6 +33,7 @@
 			<div class="user-info">
 				<div class="user-info__title">Страна, Город </div>
 				<div class="user-info__desc">
+					<!-- Чтобы небыло запятой !! -->
 					<?php if ($currentUser->country != '' && $currentUser->city != '') {
 						echo $currentUser->country . ", " . $currentUser->city;
 					} else if ($currentUser->country != '' || $currentUser->city != '') {

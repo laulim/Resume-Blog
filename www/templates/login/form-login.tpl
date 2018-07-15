@@ -7,7 +7,8 @@
 	<input class="input" type="password" name="password" placeholder="Пароль" data-required="required" data-text-error="пароль" value="123456" />
 	<div class="login-page__form-helpers">
 		<label class="checkbox__label">
-			<input class="checkbox__input" type="checkbox" name="checkbox"/><span class="checkbox__type"></span>&nbsp;Запомнить меня
+			<input class="checkbox__input" type="checkbox" name="checkbox" checked="checked" /><span class="checkbox__type"></span>
+			&nbsp;Запомнить меня
 		</label>
 		<a class="login-page__link" href="<?=HOST?>lost-password">Забыл пароль</a>
 	</div>

@@ -5,6 +5,9 @@
 	// echo "<pre>";
 	// print_r($_POST);
 	// echo "</pre>";
+	// echo "<pre>";
+	// print_r($_FILES);
+	// echo "</pre>";
 	?>
 	<div class="row">
 		<div class="col-4">
@@ -42,7 +45,7 @@
 							<div class="file-upload__thumb-delete text-center">Аватар <br>будет <br>удален</div>
 							<label class="button button--delete">
 								<input id="delete-avatar" type="checkbox" class="checkbox__input" name="deleteAvatar">
-								Удалить
+								<span>Удалить</span>
 							</label>
 						</div>
 					<?php } ?>
