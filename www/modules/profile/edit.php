@@ -9,7 +9,7 @@ if (isset($_POST['profile-update'])) {
 	if (trim($_POST['email']) == '') {
 		$errors[] = ['title' => 'Введите email'];
 	} else if (trim($_POST['email']) !== $currentUser->email) {
-		// Если пароль изменен и уже есть в системе - ошибка
+		//Новый email уже есть в системе - ошибка
 		if (R::count('users', 'email=?', array($_POST['email'])) > 0) {
 			$errors[] = ['title' => 'Пользователь с таким email уже зарегестрирован'];
 		}

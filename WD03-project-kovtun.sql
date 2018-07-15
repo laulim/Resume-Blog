@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 15 2018 г., 09:43
+-- Время создания: Июл 15 2018 г., 11:01
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -49,7 +49,7 @@ CREATE TABLE `users` (
 
 INSERT INTO `users` (`id`, `email`, `password`, `role`, `firstname`, `lastname`, `country`, `city`, `avatar`, `avatar_small`, `recovery_code`, `recovery_code_times`) VALUES
 (1, 'info@mail.com', '$2y$10$A3zMFjW1M95VhGDXOZ36BOp8MYruymgcVj29RS1Xg8SOu1ihYvd4S', 'admin', 'Мила', 'Ковтун', 'Россия', 'Воронеж', '1226356906.jpg', '48-1226356906.jpg', 'cyLIPiBM6s49ntZ', 0),
-(2, 'user@mail.com', '$2y$10$Yj6hddriRZjmGv6EL63Nl.TgpwRpfdjoDDNr/RwqtGr/VsUgL.TF.', 'user', 'Емельян', 'Казаков', '', 'Рязань', '1381983536.jpg', '48-1381983536.jpg', 'KytPYfXnxEhgqBa', 0),
+(2, 'user@mail.com', '$2y$10$Yj6hddriRZjmGv6EL63Nl.TgpwRpfdjoDDNr/RwqtGr/VsUgL.TF.', 'user', 'Емельян', 'Казаков', '', 'Рязань', '1229698198.jpg', '48-1229698198.jpg', 'KytPYfXnxEhgqBa', 0),
 (10, 'user2@mail.com', '$2y$10$0110snDgMedFH1spjjI18ebq9FeN6IAUVjovs85wRINO.EL5n7WHC', 'user', 'Василий', 'Давыдов', 'Украина', 'Киев', '1193344438.jpg', '48-1193344438.jpg', NULL, NULL),
 (11, 'user3@mail.com', '$2y$10$g1fiknActb/CUk9bXYOBuOxFk/n3REgCDxOz3HGlMpsCfTm6FuiH6', 'user', NULL, NULL, NULL, NULL, NULL, NULL, NULL, NULL);
 
