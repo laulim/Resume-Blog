@@ -2,12 +2,11 @@ AddDefaultCharset UTF-8
 php_flag display_errors on
 php_value error_reporting -1; 
 
-RewriteEngine on
-
-#Don't favicon!
-RewriteCond %{REQUEST_FILENAME} !^favicon\.ico
-
-RewriteCond %{REQUEST_FILENAME} !-d
+<IfModule mod_rewrite.c>
+RewriteEngine On
+RewriteBase /
+RewriteRule ^index\.php$ - [L]
 RewriteCond %{REQUEST_FILENAME} !-f
-RewriteCond %{REQUEST_FILENAME} !-l
-RewriteRule ^(.*) index.php?url=$1 [QSA,L]
+RewriteCond %{REQUEST_FILENAME} !-d
+RewriteRule . /index.php [L]
+</IfModule>
