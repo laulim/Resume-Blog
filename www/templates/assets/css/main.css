@@ -219,9 +219,9 @@ a.badge {
   color: #fff;
   border-color: transparent;
   background-color: #b51919;
-  height: 2em;
+/*  height: 2em;
   padding-top: 5px;
-  font-size: 14px;
+  font-size: 14px;*/
 }
 .button--delete:hover,
 .button--delete:focus {
@@ -1357,6 +1357,7 @@ a.header-admin__name {
   color: #383737;
   font-size: 16px;
   letter-spacing: 0.4px;
+  transition: color 0.2s ease-out;
 }
 .admin-nav__link:hover,
 .admin-nav__link:active,

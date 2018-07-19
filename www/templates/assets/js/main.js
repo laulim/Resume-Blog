@@ -102,6 +102,9 @@ $(document).ready(function() {
 		}
 	})
 
-
+	//:::::::: DATA NOTIFY HIDE ::::::::::
+	var notifyHide = $('[data-notify-hide]');
+	setTimeout(function(){notifyHide.slideUp(400);}, 2500);
+	notifyHide.dblclick(function(){$(this).slideUp(400);});
 
 });

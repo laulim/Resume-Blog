@@ -11,12 +11,12 @@
 
 			<?php require ROOT. "templates/_parts/errors.tpl" ?>
 
-			<form action="<?=HOST?>blog/post-new" method="POST" enctype="multipart/form-data" >
+			<form id="enter-form" action="<?=HOST?>blog/post-new" method="POST" enctype="multipart/form-data" >
 
 				<div class="title-8 mb-10 mt-20">Название</div>
-				<input class="input mb-30" type="text" name="postTitle" placeholder="Введите название поста" />
+				<input class="input mb-10" type="text" name="postTitle" placeholder="Введите название" data-required="required" data-text-error="название поста" />
 
-				<div class="file-upload mb-20">
+				<div class="file-upload mb-20 mt-20">
 					<fieldset>
 						<div class="title-8 mb-2">Изображение</div>
 						<div class="legend__descr">
@@ -28,9 +28,9 @@
 				</div>
 
 				<div class="title-8 mb-10">Содержание</div>
-				<textarea class="textarea mb-35" name="postText" placeholder="Введите содержание"></textarea>
+				<textarea class="textarea mb-10" name="postText" placeholder="Введите содержание" data-required="required" data-text-error="содержание поста" ></textarea>
 
-				<input type="submit" name="postNew" class="button button--save" value="Сохранить">
+				<input type="submit" name="postNew" class="button button--save mt-20" value="Сохранить">
 
 				<a class="button ml-20" href="<?=HOST?>blog">Отмена</a>
 			</form>

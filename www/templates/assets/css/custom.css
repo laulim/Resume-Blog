@@ -27,3 +27,8 @@
 	transition: display 0.3s ease-in;
 }
 
+.button--small {
+	height: 2em;
+	padding-top: 5px;
+	font-size: 14px;
+}

@@ -1,11 +1,4 @@
 <div class="container mb-120">
-
-	<?php 
-	// echo "<pre>";
-	// print_r($posts);
-	// echo "</pre>";
-	?>
-
 	<div class="row mb-20 mt-40 align-items-center">
 		<div class="col-md-8">
 			<div class="title-1">Блог веб-разработчика</div>

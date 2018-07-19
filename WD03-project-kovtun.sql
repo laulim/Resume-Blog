@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 19 2018 г., 17:47
+-- Время создания: Июл 19 2018 г., 21:38
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -21,6 +21,28 @@ SET time_zone = "+00:00";
 --
 -- База данных: `WD03-project-kovtun`
 --
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `categories`
+--
+
+CREATE TABLE `categories` (
+  `id` int(11) UNSIGNED NOT NULL,
+  `cat_title` varchar(191) COLLATE utf8mb4_unicode_520_ci DEFAULT NULL
+) ENGINE=InnoDB DEFAULT CHARSET=utf8mb4 COLLATE=utf8mb4_unicode_520_ci;
+
+--
+-- Дамп данных таблицы `categories`
+--
+
+INSERT INTO `categories` (`id`, `cat_title`) VALUES
+(1, 'Путешествия'),
+(2, 'Покупки'),
+(3, 'Технологии'),
+(4, 'Заметки'),
+(5, 'PHP');
 
 -- --------------------------------------------------------
 
@@ -87,6 +109,12 @@ INSERT INTO `users` (`id`, `email`, `password`, `role`, `firstname`, `lastname`,
 --
 
 --
+-- Индексы таблицы `categories`
+--
+ALTER TABLE `categories`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `posts`
 --
 ALTER TABLE `posts`
@@ -102,6 +130,12 @@ ALTER TABLE `users`
 --
 -- AUTO_INCREMENT для сохранённых таблиц
 --
+
+--
+-- AUTO_INCREMENT для таблицы `categories`
+--
+ALTER TABLE `categories`
+  MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
