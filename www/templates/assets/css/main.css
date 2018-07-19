@@ -359,6 +359,11 @@ input.button {
 .card-post__img {
   height: 140px;
   background-color: #000;
+  background: url("../img/bg/img-placeholder.jpg");
+  background-repeat: no-repeat;
+  background-position: center;
+  -webkit-background-size: cover;
+  background-size: cover;
   border-radius: 6px;
   overflow: hidden;
   display: -webkit-box;
@@ -1295,12 +1300,12 @@ fieldset {
   border-bottom: 1px solid rgba(255, 255, 255, 0.2);
 }
 .header__nav-link--active {
-  border-bottom: 1px solid transparent;
+  border-bottom: none;
 }
 .header__nav-link--active:hover,
 .header__nav-link--active:active,
 .header__nav-link--active:focus {
-  border-bottom: 1px solid #ffffff;
+  border-bottom: none;
 }
 .header-admin {
   height: 80px;
