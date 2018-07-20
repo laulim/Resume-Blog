@@ -8,7 +8,7 @@ if (isset($_POST['postNew'])) {
 	}
 
 	if (trim($_POST['postText']) == '') {
-		$errors[] = ['title' => 'Введите название поста'];
+		$errors[] = ['title' => 'Введите содержание поста'];
 	}
 
 	if (empty($errors)) {

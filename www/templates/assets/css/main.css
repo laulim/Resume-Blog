@@ -462,6 +462,7 @@ a.comment__related-to {
 }
 .error {
   width: 100%;
+  margin-bottom: 10px;
 }
 .error__title {
   border-radius: 4px;
