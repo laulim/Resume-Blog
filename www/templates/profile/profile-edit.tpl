@@ -66,7 +66,7 @@
 						<div class="file-upload__thumb">
 							<img src="<?=HOST?>/usercontent/avatar/<?=$currentUser->avatar?>" />
 							<div class="file-upload__thumb-delete text-center">Аватар <br>будет <br>удален</div>
-							<label class="button button--delete">
+							<label class="button button--delete button--small">
 								<input id="delete-avatar" type="checkbox" class="checkbox__input" name="deleteAvatar">
 								<span>Удалить</span>
 							</label>
