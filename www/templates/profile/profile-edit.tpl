@@ -14,7 +14,7 @@
 	<form id="enter-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
 		<div class="row mb-10 mt-10">
 			<div class="col-4">
-				<div class="title-6 mt-20">Имя</div>
+				<div class="title-6">Имя</div>
 				<input 
 					class="input mb-5" 
 					type="text" 
