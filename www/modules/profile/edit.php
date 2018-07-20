@@ -53,7 +53,7 @@ if (isset($_POST['profile-update'])) {
 			// Check file properties on different conditions
 			list($width, $height) = getimagesize($fileTmpLoc);
 			if ($width < 10 || $height < 10) {
-				$errors[] = ['title' => 'Изображение не имеет размераю Загрузите изображение побольше'];
+				$errors[] = ['title' => 'Изображение не имеет размера. Загрузите изображение побольше'];
 			}
 
 			if ($fileSize > 2097152) {
