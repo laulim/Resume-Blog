@@ -3,18 +3,20 @@
 		<div class="col-md-10 mb-120">
 			<div class="title-1 mb-20">Добавить пост</div>
 
-			<?php 
-			// echo "<pre>";
-			// print_r($_POST);
-			// echo "</pre>";
-			?>
-
 			<?php require ROOT. "templates/_parts/errors.tpl" ?>
 
 			<form id="enter-form" action="<?=HOST?>blog/post-new" method="POST" enctype="multipart/form-data" >
 
 				<div class="title-8 mb-10 mt-20">Название</div>
-				<input class="input mb-10" type="text" name="postTitle" placeholder="Введите название" data-required="required" data-text-error="название поста" />
+				<input 
+					class="input mb-10" 
+					type="text" 
+					name="postTitle" 
+					placeholder="Введите название" 
+					data-required="required" 
+					data-text-error="название поста"
+					value="<?=(isset($_POST['postTitle'])) ? $_POST['postTitle'] : ''?>"  
+				/>
 
 				<div class="title-8 mb-10 mt-20">Категория</div>
 				<div class="select-list">
@@ -39,7 +41,11 @@
 				</div>
 
 				<div class="title-8 mb-10">Содержание</div>
-				<textarea class="textarea mb-10" name="postText" placeholder="Введите содержание" data-required="required" data-text-error="содержание поста" ></textarea>
+				<!-- <textarea id="ckEditor" class="textarea mb-10" name="postText" placeholder="Введите содержание" data-required="required" data-text-error="содержание поста" > -->
+				<textarea id="ckEditor" class="textarea mb-10" name="postText" placeholder="Введите содержание" >
+					<?=(isset($_POST['postText'])) ? $_POST['postText'] : ''?>
+				</textarea>
+				<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
 
 				<input type="submit" name="postNew" class="button button--save mt-20" value="Сохранить">
 

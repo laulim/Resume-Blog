@@ -1,20 +1,50 @@
 <div class="container mt-50 mb-120 blog-post-page">
 	<div class="row justify-content-center">
 		<div class="col-md-10">
-			<?php 
-			// echo "<pre>";
-			// print_r($post);
-			// echo "</pre>";
-			?>
-			<a class="button button--edit" href="#">Редактировать</a>
+
+			<?php if (isset($_GET['result'])) {
+				include ROOT . "templates/blog/_results.tpl";
+			} ?>
+
 			<div class="blog-post">
-				<h1 class="title-1"><?=$post['title']?></h1>
-				<div class="blog-post__info">
-					<a class="blog-post__info-item blog-post__info-item--name"><?=$post['firstname']?> <?=$post['lastname']?></a>
-					<a class="blog-post__info-item blog-post__info-item--tag"><?=$post['cat_title']?></a>
-					<span class="blog-post__info-item blog-post__info-item--date"><?=rus_date("j F Y H:i", strtotime($post['date_time']))?></span>
+				<div class="row">
+					<div class="col">
+						<h1 class="title-1 mt-0"><?=$post['title']?></h1>
+					</div>
+
+					<?php if (isAdmin()): ?>
+						<div class="col-auto">
+							<a class="button button--edit" href="<?=HOST?>blog/post-edit?id=<?=$post['id']?>" />Редактировать</a>
+							<a class="button button--delete" href="<?=HOST?>blog/post-delete?id=<?=$post['id']?>" />Удалить</a>
+						</div>
+					<?php endif ?>
+
+				</div>
+
+				<div class="blog-post__info mb-5">
+					<a class="blog-post__info-item blog-post__info-item--name">
+						<?=$post['firstname']?> <?=$post['lastname']?>
+					</a>
+
+					<a class="blog-post__info-item blog-post__info-item--tag">
+						<?=$post['cat_title']?>
+					</a>
+
+					<span class="blog-post__info-item blog-post__info-item--date">
+						<?=rus_date("j F Y H:i", strtotime($post['date_time']))?>
+					</span>
+
 					<a class="blog-post__info-item blog-post__info-item--comments">2 комментария</a>
 				</div>
+
+				<?php if ($post['update_time'] != ''): ?>
+					<div class="blog-post__info mb-5">
+						<span class="blog-post__info-item blog-post__info-item--date">
+							Запись обновлена <?=rus_date("j F Y H:i", strtotime($post['update_time']))?>
+						</span>
+					</div>
+				<?php endif ?>
+
 				<?php if ($post['post_img'] != ''): ?>
 					<div class="blog-post__img">
 						<img src="<?=HOST?>usercontent/blog/<?=$post['post_img']?>" alt="<?=$post['title']?>" />
@@ -35,7 +65,7 @@
 			<div class="title-2">2 комментария</div>
 			<div class="comment-wrap">
 				<div class="avatar avatar--small">
-					<img src="../../../img/avatars/avatar-2.jpg" title="Джон До" />
+					<img src="<?=HOST?>templates/assets/img/avatars/avatar-2.jpg" title="Джон До" />
 				</div>
 				<div class="comment__content">
 					<div class="comment__header">
@@ -47,7 +77,7 @@
 			</div>
 			<div class="comment-wrap">
 				<div class="avatar avatar--small">
-					<img src="../../../img/avatars/avatar-2.jpg" title="Джон До" />
+					<img src="<?=HOST?>templates/assets/img/avatars/avatar-2.jpg" title="Джон До" />
 				</div>
 				<div class="comment__content">
 					<div class="comment__header">
@@ -61,7 +91,7 @@
 			<div class="comment-add">
 				<div class="comment-add__avatar">
 					<div class="avatar avatar--small">
-						<img src="../../../img/avatars/avatar-1.jpg" title="Юрий Ключевский" />
+						<img src="<?=HOST?>templates/assets/img/avatars/avatar-1.jpg" title="Юрий Ключевский" />
 					</div>
 				</div>
 				<form class="comment-add__form" id="form">

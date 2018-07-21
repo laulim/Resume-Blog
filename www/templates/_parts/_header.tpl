@@ -1,22 +1,13 @@
-<?php 
-
-if (isset($_SESSION['logged_user']) && $_SESSION['login'] == 1 &&  $_SESSION['role'] == 'admin') {
+<?php if (isAdmin()) {
 	include ROOT ."templates/_parts/_admin-panel.tpl";
-}
-
-// include ROOT ."templates/_parts/_admin-panel.tpl";
-
-// echo "<pre>";
-// print_r($_SESSION);
-// echo "</pre>";
-?>
+} ?>
 
 <header class="header-bg">
 	<div class="header">
 		<div class="header__top">
 			<?php include ROOT . "templates/_parts/_header-logo.tpl"; ?>
 			
-			<?php if (isset($_SESSION['logged_user']) && $_SESSION['login'] == 1 ) {
+			<?php if (isLoggedIn()) {
 				// user on site
 				if ($_SESSION['role'] != 'admin') {
 					// user on site - NO admin

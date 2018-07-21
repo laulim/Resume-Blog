@@ -6,6 +6,16 @@
 	background: linear-gradient(top, #4A8B4A, #1B621B);
 }
 
+.file-upload__thumb--avatar {
+	width: 222px;
+	height: 222px;
+}
+
+.file-upload__thumb--post-img {
+	width: 320px;
+	height: 140px;
+}
+
 .file-upload__thumb-delete {
 	background-color: rgba(53, 45, 45, 0.7);
 	color: #D7D2D2;
@@ -25,6 +35,10 @@
 	-webkit-transition: display 0.3s ease-in;
 	-o-transition: display 0.3s ease-in;
 	transition: display 0.3s ease-in;
+}
+
+.file-upload__thumb-delete--small {
+	padding-top: 15px;
 }
 
 .button--small {
@@ -85,3 +99,21 @@
 	border: 1px solid #999999;
 }
 
+html, body {
+	height: 100% !important; 
+}
+
+body::before {
+	content: ;
+	display: none;
+}
+
+.sticky-footer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
