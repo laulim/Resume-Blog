@@ -41,8 +41,7 @@
 				</div>
 
 				<div class="title-8 mb-10">Содержание</div>
-				<!-- <textarea id="ckEditor" class="textarea mb-10" name="postText" placeholder="Введите содержание" data-required="required" data-text-error="содержание поста" > -->
-				<textarea id="ckEditor" class="textarea mb-10" name="postText" placeholder="Введите содержание" >
+				<textarea id="ckEditor" class="textarea mb-10" name="postText" placeholder="Введите содержание" data-required="required" data-text-error="содержание поста" >
 					<?=(isset($_POST['postText'])) ? $_POST['postText'] : ''?>
 				</textarea>
 				<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>
