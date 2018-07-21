@@ -10,10 +10,10 @@
 			<div class="blog-post">
 				<h1 class="title-1"><?=$post['title']?></h1>
 				<div class="blog-post__info">
-					<a class="blog-post__info-item blog-post__info-item--name" href="#">Емельян Казаков</a>
-					<a class="blog-post__info-item blog-post__info-item--tag" href="#">Путешествия</a>
+					<a class="blog-post__info-item blog-post__info-item--name"><?=$post['firstname']?> <?=$post['lastname']?></a>
+					<a class="blog-post__info-item blog-post__info-item--tag"><?=$post['cat_title']?></a>
 					<span class="blog-post__info-item blog-post__info-item--date"><?=rus_date("j F Y H:i", strtotime($post['date_time']))?></span>
-					<a class="blog-post__info-item blog-post__info-item--comments" href="#">2 комментария</a>
+					<a class="blog-post__info-item blog-post__info-item--comments">2 комментария</a>
 				</div>
 				<?php if ($post['post_img'] != ''): ?>
 					<div class="blog-post__img">

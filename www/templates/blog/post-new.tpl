@@ -16,6 +16,17 @@
 				<div class="title-8 mb-10 mt-20">Название</div>
 				<input class="input mb-10" type="text" name="postTitle" placeholder="Введите название" data-required="required" data-text-error="название поста" />
 
+				<div class="title-8 mb-10 mt-20">Категория</div>
+				<div class="select-list">
+					<select class="select-list--select" name="postCat">
+						<option disabled>--Выберите категорию--</option>
+						<?php foreach ($cats as $cat): ?>
+							<option value="<?=$cat['id']?>"><?=$cat['cat_title']?></option>
+						<?php endforeach ?>
+					</select>
+				</div>
+				
+
 				<div class="file-upload mb-20 mt-20">
 					<fieldset>
 						<div class="title-8 mb-2">Изображение</div>

@@ -32,3 +32,56 @@
 	padding-top: 5px;
 	font-size: 14px;
 }
+
+.select-list {
+	display: block;
+	width: 16em;
+	height: 2em;
+	overflow: hidden;
+	position: relative;
+
+}
+
+.select-list:after {
+	content: '\25BC';
+	position: absolute;
+	top: 7px;
+	right: 0;
+	bottom: 0;
+	padding: 0 1em;
+	pointer-events: none;
+	color: #999999;
+	-webkit-transition: color 0.3s ease-in-out;
+	-o-transition: color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
+}
+
+.select-list:hover:after {
+	color: #34495e;
+}
+
+.select-list--select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: none;
+	display: block;
+	width: 16em;
+	height: 2em;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0;
+	padding: 0 0 0 0.5em;
+	border: 1px solid #B1BFC7;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.select-list--select:hover,
+.select-list--select:active,
+.select-list--select:focus {
+	border: 1px solid #999999;
+}
+

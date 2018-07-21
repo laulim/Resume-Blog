@@ -1196,6 +1196,9 @@ fieldset {
   border-radius: 4px;
   padding: 12px 12px;
   cursor: pointer;
+  -webkit-transition: all 0.3s ease-in-out;
+  -o-transition: all 0.3s ease-in-out;
+  transition: all 0.3s ease-in-out;
 }
 .inputfile:hover + label,
 .inputfile + label:hover {
