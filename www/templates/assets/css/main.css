@@ -191,12 +191,12 @@ a.badge {
   text-decoration: none;
   font-weight: 700;
 }
-.button:hover,
-.button:focus {
+.button:not(.button--off):hover,
+.button:not(.button--off):focus {
   border-color: #DEE8EE;
   background-color: #DEE8EE;
 }
-.button:active {
+.button:not(.button--off):active {
   border-color: #B9DFF7;
   background-color: #B9DFF7;
 }

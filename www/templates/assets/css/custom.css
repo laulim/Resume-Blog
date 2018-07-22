@@ -117,3 +117,9 @@ body::before {
 	flex-direction: column;
 	justify-content: space-between;
 }
+
+.button--off {
+	cursor: default;
+	color: #DEE8EE;
+}
+

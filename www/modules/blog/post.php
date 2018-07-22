@@ -14,6 +14,16 @@ $post = $post[0];
 
 $title = $post['title'];
 
+// Для кнопок вперед - назад
+$postsId = R::getCol('SELECT id FROM posts');
+foreach ($postsId as $index => $id) {
+	if ($id == $post['id']) {
+		@$nextId = $postsId[$index + 1];
+		@$prevId = $postsId[$index - 1];
+		break;
+	}
+}
+
 
 // Готовим контент для центральной части
 ob_start();
