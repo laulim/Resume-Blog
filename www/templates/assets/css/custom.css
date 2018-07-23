@@ -123,3 +123,14 @@ body::before {
 	color: #DEE8EE;
 }
 
+.button--off:hover,
+.button--off:focus {
+	border-color: #DEE8EE;
+	background-color: #fff;
+}
+
+.button--off:active {
+	border-color: #DEE8EE;
+	background-color: #fff;
+}
+
