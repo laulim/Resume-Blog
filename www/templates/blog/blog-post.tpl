@@ -79,9 +79,6 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-		<pre>
-			<?php print_r($comments); ?>
-		</pre>
 
 		<div class="col-md-10">
 			<?php if (count($comments) > 0) { ?>
