@@ -106,4 +106,9 @@
 		</div>
 	</div>
 </div>
-<?php include ROOT . "templates/contacts/_google-map.tpl" ?>
+<div class="container-fluid px-0">
+	<div class="contacts-map" id="map"></div>
+</div>
+<script type="text/javascript" async defer src="https://maps.googleapis.com/maps/api/js?key=
+AIzaSyDbkknSE6a4VzmdR9ZeZoiT2w509ybxV9U&callback=initMap"></script>
+<script src="<?=HOST?>templates/assets/js/google-map.js"></script>
