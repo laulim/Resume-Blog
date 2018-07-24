@@ -13,11 +13,11 @@ $post = R::getAll($sqlPost);
 $post = $post[0];
 
 $sqlComments = 'SELECT 
-			comments.text, comments.date_time, comments.user_id,
+			comments.id, comments.text, comments.date_time, comments.user_id,
 			users.firstname, users.lastname, users.email, users.avatar_small
 		FROM `comments`
 		INNER JOIN users ON comments.user_id = users.id
-		WHERE comments.post_id = ' .$_GET['id'];
+		WHERE comments.post_id = ' .$_GET['id'] .' ORDER BY comments.id ASC';
 
 $comments = R::getAll($sqlComments);
 
