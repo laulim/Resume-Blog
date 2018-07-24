@@ -22,7 +22,7 @@
 		<a class="admin-nav__link" href="<?=HOST?>"> 
 			<i class="fas fa-edit link__icon"></i><span>Обо мне</span>
 		</a>
-		<a class="admin-nav__link" href="<?=HOST?>"> 
+		<a class="admin-nav__link" href="<?=HOST?>contacts"> 
 			<i class="fas fa-edit link__icon"></i><span>Контакты</span>
 		</a>
 		<a class="admin-nav__link" href="<?=HOST?>"> 

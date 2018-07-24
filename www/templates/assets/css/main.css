@@ -1587,14 +1587,16 @@ a.header-admin__name {
   justify-content: space-between;
 }
 .contacts-table {
-  display: inline-block;
-  width: 100%;
   font-size: 16px;
   line-height: 1.5;
 }
 .contacts-table__index {
   vertical-align: top;
-  width: 45%;
+  width: 55%;
+  font-weight: 700;
+}
+.contacts-table__value a {
+  display: inline-block;
 }
 .contacts-table__value--bold {
   font-weight: 700;

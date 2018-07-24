@@ -11,43 +11,82 @@
 	</div>
 	<div class="row">
 		<div class="col-5">
-			<div class="title-1">Контакты</div>
-			<table class="contacts-table text-left">
-				<tr>
-					<th class="contacts-table__index">Email</th>
-					<td class="contacts-table__value pb-10">
-						<a href="mailto:webdev-ninja@mail.ru">webdev-ninja@mail.ru</a>
-					</td>
-				</tr>
-				<tr>
-					<th class="contacts-table__index">Skype</th>
-					<td class="contacts-table__value pb-10">
-						<a href="skype:webdev-ninja?chat">webdev-ninja</a>
-					</td>
-				</tr>
-				<tr>
-					<th class="contacts-table__index" rowspan="2">Социальные сети</th>
-					<td class="contacts-table__value contacts-table__value--bold pb-10">
-						<a href="#">Профиль Вконтакте</a>
-					</td>
-				</tr>
-				<tr>
-					<td class="contacts-table__value contacts-table__value--bold pb-20">
-						<a href="#">Профиль Facebook</a>
-					</td>
-				</tr>
-				<tr>
-					<th class="contacts-table__index">Телефон</th>
-					<td class="contacts-table__value pb-10">+595-456-123</td>
-				</tr>
-				<tr>
-					<th class="contacts-table__index">Адрес</th>
-					<td class="contacts-table__value">Россия, Московская обл. г.Зеленоград</td>
-				</tr>
-			</table>
+			<h2 class="title-1">Контакты</h2>
+			<?php if ($contacts['firstname'] != ''): ?>	
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Имя</div>
+				<div class="col-6 contacts-table__value">
+					<?=$contacts['firstname']?>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['lastname'] != ''): ?>	
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Фамилия</div>
+				<div class="col-6 contacts-table__value">
+					<?=$contacts['lastname']?>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['email'] != ''): ?>	
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Email</div>
+				<div class="col-6 contacts-table__value">
+					<a target="_blank" href="mailto:<?=$contacts['email']?>"><?=$contacts['email']?></a>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['skype'] != ''): ?>
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Skype</div>
+				<div class="col-6 contacts-table__value">
+					<a target="_blank" href="skype:<?=$contacts['skype']?>?chat"><?=$contacts['skype']?></a>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['vk'] != '' || $contacts['fb'] != '' || $contacts['twitter'] != ''): ?>	
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Социальные сети</div>
+				<div class="col-6 contacts-table__value contacts-table__value--bold">
+					<?php if ($contacts['vk'] != ''): ?>
+					<a target="_blank" class="mb-10" href="<?=$contacts['vk']?>">Профиль Вконтакте</a>
+					<?php endif ?>
+					<?php if ($contacts['fb'] != ''): ?>
+					<a target="_blank" class="mb-10" href="<?=$contacts['fb']?>">Профиль Facebook</a>	
+					<?php endif ?>
+					<?php if ($contacts['twitter'] != ''): ?>
+					<a target="_blank" class="mb-10" href="<?=$contacts['twitter']?>">Профиль Twitter</a>
+					<?php endif ?>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['github'] != ''): ?>
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Github</div>
+				<div class="col-6 contacts-table__value">
+					<a target="_blank" href="https://github.com/<?=$contacts['github']?>"><?=$contacts['github']?></a>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['phone'] != ''): ?>
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Телефон</div>
+				<div class="col-6 contacts-table__value">
+					<?=$contacts['phone']?>
+				</div>
+			</div>
+			<?php endif ?>
+			<?php if ($contacts['address'] != ''): ?>
+			<div class="row contacts-table mb-10">
+				<div class="col-6 contacts-table__index">Адрес</div>
+				<div class="col-6 contacts-table__value">
+					<?=$contacts['address']?>
+				</div>
+			</div>
+			<?php endif ?>
 		</div>
 		<div class="col-4 offset-1">
-			<div class="title-1">Связаться со мной</div>
+			<h2 class="title-1">Связаться со мной</h2>
 			<form class="contact-form">
 				<input class="input" type="text" name="firstname" placeholder="Введите имя" />
 				<input class="input" type="text" name="email" placeholder="Email" />
@@ -67,7 +106,4 @@
 		</div>
 	</div>
 </div>
-<div class="container-fluid px-0">
-	<div class="contacts-map" id="map"></div>
-</div>
-<script src="<?=HOST?>templates/assets/js/google-map.js"></script>
+<?php include ROOT . "templates/contacts/_google-map.tpl" ?>

@@ -1,9 +1,7 @@
-	<?php 
-	function dataFromPost ($fieldName) {
+	<?php function dataFromPost ($fieldName) {
 		global $contacts;
-		echo isset($_POST[$fieldName]) ? @$_POST[$fieldName] : $contacts[$fieldName];
-	}
-	?>
+		echo isset($_POST[$fieldName]) ? $_POST[$fieldName] : $contacts[$fieldName];
+	} ?>
 <form class="container" action="<?=HOST?>contacts-edit" method="post" id="validate-form" />
 	<div class="mt-80 title-1 mb-10">Редактировать данные</div>
 	<?php require ROOT. "templates/_parts/errors.tpl" ?>
@@ -13,14 +11,12 @@
 			<div class="title-6 ">Имя</div>
 			<input 
 				class="input mb-5" type="text" name="firstname" placeholder="Введите имя" 
-				data-required="required" data-text-error="имя" 
 				value="<?php dataFromPost("firstname"); ?>" />
 		</div>
 		<div class="col-md-3">
 			<div class="title-6">Фамилия</div>
 			<input 
 				class="input mb-5" type="text" name="lastname" placeholder="Введите фамилию" 
-				data-required="required" data-text-error="фамилию" 
 				value="<?php dataFromPost("lastname"); ?>" />
 		</div>
 	</div>
@@ -41,6 +37,12 @@
 	</div>
 	<div class="row mt-10">
 		<div class="col-md-3">
+			<div class="title-6">GitHub</div>
+			<input 
+				class="input mb-5" type="text" name="github" placeholder="Введите логин github" 
+				value="<?php dataFromPost("github"); ?>" />
+		</div>
+		<div class="col-md-3">
 			<div class="title-6">Вконтакте</div>
 			<input 
 				class="input mb-5" type="text" name="vk" placeholder="Введите ссылку на профиль" 
@@ -51,12 +53,6 @@
 			<input 
 				class="input mb-5" type="text" name="fb" placeholder="Введите ссылку на профиль" 
 				value="<?php dataFromPost("fb"); ?>" />
-		</div>
-		<div class="col-md-3">
-			<div class="title-6">GitHub</div>
-			<input 
-				class="input mb-5" type="text" name="github" placeholder="Введите ссылку на профиль" 
-				value="<?php dataFromPost("github"); ?>" />
 		</div>
 		<div class="col-md-3">
 			<div class="title-6">Twitter</div>
