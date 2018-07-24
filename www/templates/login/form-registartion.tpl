@@ -1,5 +1,5 @@
 
-<form class="login-page__form text-center" id="enter-form" method="POST" action="<?=HOST?>registration">
+<form class="login-page__form text-center" id="validate-form" method="POST" action="<?=HOST?>registration">
 	<div class="title-1">Регистрация</div>
 
 	<?php 

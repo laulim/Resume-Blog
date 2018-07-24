@@ -7,7 +7,7 @@ $(document).ready(function() {
 
 		// Поменять id форм на что-нибкдь более логично-универсальное. Утром...
 		// #form пока занято...
-		var _form = $('#enter-form');
+		var _form = $('#validate-form');
 		var _input = _form.find('input[data-required="required"], textarea[data-required="required"]');
 
 		var init = function(){
@@ -54,41 +54,6 @@ $(document).ready(function() {
 	}());
 
 	validateForm.init();
-
-	// ::::::::: COMMENT FORM VALIDATE ::::::::
-	// Удалить после реализации комментария !!!!!
-	// Код validateForm работает !! 
-	var commentCheck = (function(){
-		var _form = $('#form');
-		var _input = _form.find('textarea');
-		var _error = _form.find('.error');
-
-		 function init(){
-			_setUpListeners();
-		}
-
-		function _setUpListeners() {
-			_form.on('submit', function(event){
-				_formValidate(event)
-			})
-		}
-
-		function _formValidate(event) {
-			if (_input.val().trim() == '') {
-				_error.slideDown(500);
-				event.preventDefault();
-			}
-
-			_input.on('keydown', function(){
-				_error.slideUp(500);
-			})
-		}
-
-		return { init }
-
-	}());
-
-	commentCheck.init();
 
 	//:::::::: DELETE AVATAR ::::::::::
 	var deleteAvatar = $('#enter-form').find('#delete-avatar');

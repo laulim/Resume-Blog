@@ -3,18 +3,9 @@
 		<div class="col-md-10 mb-120">
 			<div class="title-1 mb-20">Редактировать пост</div>
 
-			<?php 
-			// echo "<pre>";
-			// print_r($post);
-			// echo "</pre>";
-			// echo "<pre>";
-			// print_r($cats);
-			// echo "</pre>";
-			?>
-
 			<?php require ROOT. "templates/_parts/errors.tpl" ?>
 
-			<form id="enter-form" action="<?=HOST?>blog/post-edit?id=<?=$post['id']?>" method="POST" enctype="multipart/form-data" >
+			<form id="validate-form" action="<?=HOST?>blog/post-edit?id=<?=$post['id']?>" method="POST" enctype="multipart/form-data" >
 
 				<div class="title-8 mb-10 mt-20">Название</div>
 				<input 

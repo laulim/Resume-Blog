@@ -1,17 +1,11 @@
 <div class="container pt-40 pb-100">
 	<h1 class="title-1 mb-10">Редактировать профиль</h1>
-
-	<?php 
-	// echo "<pre>";
-	// print_r($_POST);
-	// echo "</pre>";
-	?>
 	<div class="row">
 		<div class="col-4">
 			<?php require ROOT. "templates/_parts/errors.tpl" ?>
 		</div>	
 	</div>
-	<form id="enter-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
+	<form id="validate-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
 		<div class="row mb-10 mt-10">
 			<div class="col-4">
 				<div class="title-6">Имя</div>
@@ -24,7 +18,6 @@
 					data-text-error="имя" 
 					value="<?=(isset($_POST['firstname'])) ? $_POST['firstname'] : $currentUser->firstname?>"
 				/>
-				<!-- без isset не работает -->
 				
 				<div class="title-6 mt-20">Фамилия</div>
 				<input 

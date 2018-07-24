@@ -447,6 +447,7 @@ a.comment__related-to {
 }
 .comment__text {
   margin-top: 7px;
+  margin-bottom: 0;
   color: #383737;
   font-size: 16px;
   line-height: 1.5;
