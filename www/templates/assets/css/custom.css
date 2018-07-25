@@ -134,3 +134,9 @@ body::before {
 	background-color: #fff;
 }
 
+.comment-wrap .button--delete {
+	position: absolute;
+	top: 19px;
+	right: 19px;
+}
+

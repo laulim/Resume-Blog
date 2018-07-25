@@ -81,7 +81,6 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-
 		<div class="col-md-10">
 			<?php if (count($comments) > 0) { ?>
 			<div id="comments" class="title-2"><?commentNumber( count($comments) )?></div>

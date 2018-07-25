@@ -11,7 +11,7 @@
 		<div class="col-10 align-self-center">
 
 			<?php foreach ($messages as $message) {
-				include ROOT . "modules/contacts/_message-card.tpl";
+				include ROOT . "templates/contacts/_message-card.tpl";
 			 } ?>
 
 		</div>
