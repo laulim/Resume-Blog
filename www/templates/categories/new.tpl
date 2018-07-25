@@ -8,7 +8,15 @@
 			<form id="enter-form" action="<?=HOST?>blog/category-new" method="POST"  >
 
 				<div class="title-8 mb-10 mt-20">Название категории</div>
-				<input class="input mb-10" type="text" name="catTitle" placeholder="Введите название" data-required="required" data-text-error="название категории" />
+				<input 
+					class="input mb-10" 
+					type="text" 
+					name="catTitle" 
+					placeholder="Введите название" 
+					data-required="required" 
+					data-text-error="название категории" 
+					value="<?=(isset($_POST['catTitle'])) ? $_POST['catTitle'] : ''?>" 
+				/>
 
 				<input type="submit" name="catNew" class="button button--save mt-20" value="Сохранить">
 

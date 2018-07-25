@@ -1,4 +1,5 @@
-<body class="home-page">
+<body class="home-page sticky-footer">
 
-
-<?=$content ?>
+<div class="page-content">
+	<?php echo $content; ?>
+</div>

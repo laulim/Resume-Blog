@@ -14,7 +14,7 @@
 	<form id="enter-form" enctype="multipart/form-data" action="<?=HOST?>profile-edit" method="POST" >
 		<div class="row mb-10 mt-10">
 			<div class="col-4">
-				<div class="title-6 mt-20">Имя</div>
+				<div class="title-6">Имя</div>
 				<input 
 					class="input mb-5" 
 					type="text" 
@@ -52,8 +52,20 @@
 		<div class="row mt-20">
 			<div class="col-md-auto">
 				<div class="file-upload">
+					<div class="title-8" >Фотография</div>
+
+					<?php if ($_SESSION['logged_user']['avatar'] != '') { ?>
+						<div class="file-upload__thumb file-upload__thumb--avatar mt-15">
+							<img src="<?=HOST?>/usercontent/avatar/<?=$currentUser->avatar?>" />
+							<div class="file-upload__thumb-delete text-center">Фотография <br>будет <br>удалена</div>
+							<label class="button button--delete button--small">
+								<input id="delete-avatar" type="checkbox" class="checkbox__input" name="deleteAvatar">
+								<span>Удалить</span>
+							</label>
+						</div>
+					<?php } ?>
+					
 					<fieldset>
-						<div class="title-8 mb-2">Фотография</div>
 						<div class="legend__descr">
 							<p>Изображение jpg или png, размером больше чем 100х100 пикселей, и весом до 2Мб.</p>
 						</div>
@@ -62,23 +74,13 @@
 						<span>Файл не выбран</span>
 					</fieldset>
 
-					<?php if ($_SESSION['logged_user']['avatar'] != '') { ?>
-						<div class="file-upload__thumb">
-							<img src="<?=HOST?>/usercontent/avatar/<?=$currentUser->avatar?>" />
-							<div class="file-upload__thumb-delete text-center">Аватар <br>будет <br>удален</div>
-							<label class="button button--delete button--small">
-								<input id="delete-avatar" type="checkbox" class="checkbox__input" name="deleteAvatar">
-								<span>Удалить</span>
-							</label>
-						</div>
-					<?php } ?>
 
 				</div>
 			</div>
 		</div>
 		<div class="row mb-30">
 			<div class="col-4">
-				<div class="title-6 mt-10 ">Страна</div>
+				<div class="title-6 mt-20 ">Страна</div>
 				<input 
 					class="input mb-5" 
 					type="text" 
