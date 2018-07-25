@@ -21,6 +21,7 @@
 				echo $_SESSION['logged_user']['email'];
 			}?>
 		</div>
+		<?php require ROOT. "templates/_parts/errors.tpl" ?>
 		<textarea 
 			class="textarea" name="commentText" 
 			data-required="required" 

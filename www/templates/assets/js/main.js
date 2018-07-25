@@ -5,8 +5,6 @@ $(document).ready(function() {
 	// ::::::::: ENTER FORM VALIDATE ::::::::
 	var validateForm = (function(){
 
-		// Поменять id форм на что-нибкдь более логично-универсальное. Утром...
-		// #form пока занято...
 		var _form = $('#validate-form');
 		var _input = _form.find('input[data-required="required"], textarea[data-required="required"]');
 

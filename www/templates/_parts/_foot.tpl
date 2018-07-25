@@ -3,7 +3,6 @@
 	<!-- endbuild -->
 	<!-- build:jsVendor js/vendor.js -->
 	<script src="<?=HOST?>templates/assets/js/custom-file-input.js"></script>
-	<script src="<?=HOST?>templates/assets/js/google-map.js"></script>
 	<!-- endbuild -->
 	<!-- build:jsMain js/main.js -->
 	<script src="<?=HOST?>templates/assets/js/main.js"></script>

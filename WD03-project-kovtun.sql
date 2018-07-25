@@ -3,7 +3,7 @@
 -- https://www.phpmyadmin.net/
 --
 -- Хост: 127.0.0.1:3306
--- Время создания: Июл 24 2018 г., 13:50
+-- Время создания: Июл 25 2018 г., 00:50
 -- Версия сервера: 5.6.38
 -- Версия PHP: 5.5.38
 
@@ -71,6 +71,33 @@ INSERT INTO `comments` (`id`, `post_id`, `user_id`, `text`, `date_time`) VALUES
 (4, 12, 11, 'Кораблик!', '2018-07-24 11:07:16'),
 (5, 12, 2, 'Новый комментарий!', '2018-07-24 11:22:15'),
 (6, 10, 2, 'Упс! новый комментарий!', '2018-07-24 11:52:38');
+
+-- --------------------------------------------------------
+
+--
+-- Структура таблицы `contacts`
+--
+
+CREATE TABLE `contacts` (
+  `id` int(11) NOT NULL,
+  `email` varchar(191) DEFAULT NULL,
+  `phone` varchar(255) DEFAULT NULL,
+  `address` text,
+  `firstname` varchar(191) DEFAULT NULL,
+  `lastname` varchar(191) DEFAULT NULL,
+  `skype` varchar(255) DEFAULT NULL,
+  `vk` varchar(255) DEFAULT NULL,
+  `fb` varchar(255) DEFAULT NULL,
+  `github` text,
+  `twitter` text
+) ENGINE=InnoDB DEFAULT CHARSET=utf8;
+
+--
+-- Дамп данных таблицы `contacts`
+--
+
+INSERT INTO `contacts` (`id`, `email`, `phone`, `address`, `firstname`, `lastname`, `skype`, `vk`, `fb`, `github`, `twitter`) VALUES
+(1, 'laudylim@yandex.ru', '+7-960-122-94-17', 'г. Воронеж', 'Мила', 'Ковтун', 'laudylim', 'https://vk.com/id37809095', 'https://www.facebook.com/mila.kovtun', 'laulim', '');
 
 -- --------------------------------------------------------
 
@@ -155,6 +182,12 @@ ALTER TABLE `comments`
   ADD KEY `index_foreignkey_comments_user` (`user_id`);
 
 --
+-- Индексы таблицы `contacts`
+--
+ALTER TABLE `contacts`
+  ADD PRIMARY KEY (`id`);
+
+--
 -- Индексы таблицы `posts`
 --
 ALTER TABLE `posts`
@@ -182,6 +215,12 @@ ALTER TABLE `categories`
 --
 ALTER TABLE `comments`
   MODIFY `id` int(11) UNSIGNED NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=7;
+
+--
+-- AUTO_INCREMENT для таблицы `contacts`
+--
+ALTER TABLE `contacts`
+  MODIFY `id` int(11) NOT NULL AUTO_INCREMENT, AUTO_INCREMENT=2;
 
 --
 -- AUTO_INCREMENT для таблицы `posts`
