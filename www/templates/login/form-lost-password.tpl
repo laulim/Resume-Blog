@@ -1,4 +1,4 @@
-<form class="login-page__form text-center" id="enter-form" method="POST" action="<?=HOST?>lost-password">
+<form class="login-page__form text-center" id="validate-form" method="POST" action="<?=HOST?>lost-password">
 	<div class="title-1 mb-30">Восстановление пароля</div>
 
 	<?php 

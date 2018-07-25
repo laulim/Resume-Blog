@@ -3,12 +3,6 @@
 		<div class="col">
 			<div class="title-1 mb-30">Профиль</div>
 		</div>
-		<?php 
-		// echo "<pre>";
-		// print_r($_FILES);
-		// echo "</pre>";
-		?>
-
 		<div class="col text-right">
 			<a class="button" href="<?=HOST?>profile-edit">Редактировать</a>
 		</div>

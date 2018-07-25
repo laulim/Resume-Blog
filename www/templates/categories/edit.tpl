@@ -5,7 +5,7 @@
 
 			<?php require ROOT. "templates/_parts/errors.tpl"; ?>
 
-			<form id="enter-form" action="<?=HOST?>blog/category-edit?id=<?=$cat['id']?>" method="POST"  >
+			<form id="validate-form" action="<?=HOST?>blog/category-edit?id=<?=$cat['id']?>" method="POST"  >
 
 				<div class="title-8 mb-10 mt-20">Название категории</div>
 				<input 

@@ -1,4 +1,10 @@
 <?php 
+
+if (isLoggedIn()) {
+	header('Location: ' . HOST);
+	die();
+}
+
 $title = 'Введите новый пароль';
 
 $recoveryCode = false;

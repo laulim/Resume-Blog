@@ -1,5 +1,10 @@
 <?php 
 
+if (isLoggedIn()) {
+	header('Location: ' . HOST);
+	die();
+}
+
 $title = "Регистрация";
 
 // Если форма отправлена - делаем регистрацию

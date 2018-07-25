@@ -1,4 +1,10 @@
 <?php 
+
+if (isLoggedIn()) {
+	header('Location: ' . HOST);
+	die();
+}
+
 $title = 'Восстановление пароля';
 
 if (isset($_POST['lost-password'])) {

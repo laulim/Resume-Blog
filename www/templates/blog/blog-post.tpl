@@ -33,8 +33,12 @@
 					<span class="blog-post__info-item blog-post__info-item--date">
 						<?=rus_date("j F Y H:i", strtotime($post['date_time']))?>
 					</span>
-
-					<a class="blog-post__info-item blog-post__info-item--comments">2 комментария</a>
+					
+					<?php if (count($comments) > 0): ?>
+					<a href="#comments" class="blog-post__info-item blog-post__info-item--comments">
+						<?commentNumber( count($comments) )?>
+					</a>
+					<?php endif ?>
 				</div>
 
 				<?php if ($post['update_time'] != ''): ?>
@@ -75,48 +79,17 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
+
 		<div class="col-md-10">
-			<div class="title-2">2 комментария</div>
-			<div class="comment-wrap">
-				<div class="avatar avatar--small">
-					<img src="<?=HOST?>templates/assets/img/avatars/avatar-2.jpg" title="Джон До" />
-				</div>
-				<div class="comment__content">
-					<div class="comment__header">
-						<div class="comment__user-name">Джон До</div>
-						<div class="comment__date"><i class="far fa-clock"></i> 05 Мая 2017 года в 15:45</div>
-					</div>
-					<div class="comment__text">Замечательный парк, обязательно отправлюсь туда этим летом.</div>
-				</div>
-			</div>
-			<div class="comment-wrap">
-				<div class="avatar avatar--small">
-					<img src="<?=HOST?>templates/assets/img/avatars/avatar-2.jpg" title="Джон До" />
-				</div>
-				<div class="comment__content">
-					<div class="comment__header">
-						<div class="comment__user-name">Джон До</div>
-						<div class="comment__date"><i class="far fa-clock"></i> 05 Мая 2017 года в 15:45</div>
-					</div>
-					<div class="comment__text">Замечательный парк, обязательно отправлюсь туда этим летом.</div>
-				</div>
-			</div>
-			<div class="title-2">Оставить комментарий</div>
-			<div class="comment-add">
-				<div class="comment-add__avatar">
-					<div class="avatar avatar--small">
-						<img src="<?=HOST?>templates/assets/img/avatars/avatar-1.jpg" title="Юрий Ключевский" />
-					</div>
-				</div>
-				<form class="comment-add__form" id="form">
-					<div class="title-6 mt-0 mb-2">Юрий Ключевский</div>
-					<div class="error">
-						<div class="error__title">Комментарий не может быть пустым.</div>
-					</div>
-					<textarea class="textarea" name="comment" placeholder="Присоединиться к обсуждению..."></textarea>
-					<input class="button" type="submit" value="Опубликовать" name="post-comment" />
-				</form>
-			</div>
+			<?php if (count($comments) > 0) { ?>
+			<div id="comments" class="title-2"><?commentNumber( count($comments) )?></div>
+				<?php foreach ($comments as $comment) {
+					include ROOT . "templates/blog/_comment-card.tpl";
+				} ?>
+			<?php } ?>
+			
+			<?php include ROOT . "templates/blog/_add-comment-form.tpl" ?>
+			
 		</div>
 	</div>
 </div>
