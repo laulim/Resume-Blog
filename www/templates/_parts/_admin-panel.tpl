@@ -25,7 +25,7 @@
 		<a class="admin-nav__link" href="<?=HOST?>contacts"> 
 			<i class="fas fa-edit link__icon"></i><span>Контакты</span>
 		</a>
-		<a class="admin-nav__link" href="<?=HOST?>"> 
+		<a class="admin-nav__link" href="<?=HOST?>messages"> 
 			<i class="fas fa-envelope link__icon"></i><span>Сообщения</span>
 		</a>
 	</div>

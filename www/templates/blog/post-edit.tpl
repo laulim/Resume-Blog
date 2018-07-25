@@ -21,7 +21,7 @@
 				<div class="title-8 mb-10 mt-20">Категория</div>
 				<div class="select-list">
 					<select class="select-list--select" name="postCat">
-						<option disabled>--Выберите категорию--</option>
+						<option>--Выберите категорию--</option>
 						<?php foreach ($cats as $cat): ?>
 							<option 
 								value="<?=$cat['id']?>" 
@@ -62,10 +62,7 @@
 					id="ckEditor" 
 					class="textarea mb-10" 
 					name="postText" 
-					placeholder="Введите содержание" 
-					data-required="required" 
-					data-text-error="содержание поста" 
-				/>
+					placeholder="Введите содержание" />
 					<?=(isset($_POST['postText'])) ? $_POST['postText'] : $post['text']?>
 				</textarea>
 				<?php include_once ROOT . "templates/_parts/_ckEditorConnect.tpl" ?>

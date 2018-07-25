@@ -87,21 +87,30 @@
 		</div>
 		<div class="col-4 offset-1">
 			<h2 class="title-1">Связаться со мной</h2>
-			<form class="contact-form">
-				<input class="input" type="text" name="firstname" placeholder="Введите имя" />
-				<input class="input" type="text" name="email" placeholder="Email" />
-				<textarea class="textarea" name="message" placeholder="Сообщение"></textarea>
-				<div class="file-upload mt-20">
+			<?php require ROOT. "templates/_parts/success.tpl" ?>
+			<?php require ROOT. "templates/_parts/errors.tpl" ?>
+			<form class="contact-form" id="validate-form" method="POST" action="<?=HOST?>contacts" enctype="multipart/form-data">
+				<input 
+					class="input" type="text" name="name" placeholder="Введите имя"
+					data-required="required" data-text-error="имя"/>
+				<input 
+					class="input" type="text" name="email" placeholder="Email"
+					data-required="required" data-text-error="email" />
+				<textarea 
+					class="textarea mb-10" name="message" placeholder="Сообщение"
+					data-required="required" data-text-error="текст сообщения"></textarea>
+				<div class="file-upload mt-10">
 					<fieldset>
 						<legend>
 							<div class="title-8 mb-2">Прикрепить файл</div>
-							<div class="legend__descr mb-10">jpg, png, pdf, doc, весом до 2Мб.</div>
+							<div class="legend__descr mb-10">jpg, png, gif, pdf, doc, весом до 4Мб.</div>
 						</legend>
-						<input class="inputfile" id="#file-1" type="file" name="file-1" data-multiple-caption="{count} файлов выбрано" multiple="multiple" />
-						<label for="#file-1">Выбрать файл</label><span>Файл не выбран</span>
+						<input class="inputfile" id="#file-1" type="file" name="userFile" />
+						<label for="#file-1">Выбрать файл</label>
+						<span>Файл не выбран</span>
 					</fieldset>
 				</div>
-				<input class="button button--save" type="submit" value="Отправить" />
+				<input class="button button--save mt-5" type="submit" name="newMessage" value="Отправить" />
 			</form>
 		</div>
 	</div>

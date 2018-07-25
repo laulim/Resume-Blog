@@ -1,12 +1,12 @@
 <?php 
 
 $sqlPost = 'SELECT
-		posts.id, posts.text, posts.title, posts.post_img, posts.date_time, posts.update_time, posts.author_id, posts.cat, 
+		posts.id, posts.title, posts.text, posts.post_img, posts.date_time, posts.update_time, posts.author_id, posts.cat, 
 		users.firstname, users.lastname,
 		categories.cat_title
 	FROM `posts` 
-	INNER JOIN categories ON posts.cat = categories.id
-	INNER JOIN users ON posts.author_id = users.id 
+	LEFT JOIN categories ON posts.cat = categories.id
+	LEFT JOIN users ON posts.author_id = users.id 
 	WHERE posts.id = '.$_GET['id'].' lIMIT 1';
 
 $post = R::getAll($sqlPost);
