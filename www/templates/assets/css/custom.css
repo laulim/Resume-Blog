@@ -16,6 +16,16 @@
 	height: 140px;
 }
 
+.file-upload__thumb--about-avatar {
+	width: 250px;
+	border-radius: 85px;
+	background-color: transparent;
+}
+.file-upload__thumb--about-avatar .button--delete {
+	right: 40px;
+	top: 10px;
+}
+
 .file-upload__thumb-delete {
 	background-color: rgba(53, 45, 45, 0.7);
 	color: #D7D2D2;
@@ -35,6 +45,17 @@
 	-webkit-transition: display 0.3s ease-in;
 	-o-transition: display 0.3s ease-in;
 	transition: display 0.3s ease-in;
+}
+
+.file-upload__thumb--about-avatar .file-upload__thumb-delete {
+	background-color: transparent;
+	color: #acb6bb;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	padding-top: 42px;
+	left: 75px;
+	right: 20px;
 }
 
 .file-upload__thumb-delete--small {
@@ -140,3 +161,69 @@ body::before {
 	right: 19px;
 }
 
+.about-text > h1, 
+.about-text > h2, 
+.about-text > h3,
+.about-text > h4,
+.about-text > h5,
+.about-text > h6 {
+	margin-bottom: 0.3em;
+}
+
+.input--number::-webkit-inner-spin-button,
+.input--number::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
+}
+
+
+/* :::::::::::::::::::: INDUCATOR ::::::::::::::::::*/
+
+.indicator {
+	display: inline-block;
+	margin-right: 55px;
+	position: relative;
+}
+.indicator:last-child {
+	margin-right: 0;
+}
+.indicator__value {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 20px;
+	font-weight: 900;
+	transform: translate(-50%, -50%);
+}
+
+.indicator__value--small {
+	font-size: 16px;
+}
+.circle__bg {
+	fill: transparent;
+	stroke-width: 10px;
+	stroke: rgba(226, 226, 226, 0.05);
+}
+
+.circle__indicator {
+	fill: transparent;
+	stroke-width: 10px;
+	stroke: rgba(255, 255, 255, 0.5);
+	transform-origin: center;
+	transform: rotate(-90deg);
+}
+
+.circle__indicator--green {
+	stroke: #3aaa35;
+}
+.circle__indicator--blue {
+	stroke: #009cf5;
+}
+.circle__indicator--yellow {
+	stroke: #ffcc00;
+}
+
+/* :::::::::::::::::::: // INDUCATOR ::::::::::::::::::*/

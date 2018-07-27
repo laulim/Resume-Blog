@@ -2,7 +2,7 @@
 	<div class="container">
 		<div class="row">
 			<div class="col-4">
-				<p>© Dream-Team</p>
+				<p>© laudylim@yandex.ru</p>
 				<p>Создано с &nbsp<i class="fas fa-heart"></i>&nbsp в <a class="footer-link__style" href="http://webcademy.ru/" target="_blank">WebCademy.ru</a> в 2018 году</p>
 			</div>
 			<div class="col-4">

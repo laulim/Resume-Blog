@@ -122,6 +122,32 @@ switch ($uri[0]) {
 		include ROOT . "modules/contacts/message-delete.php";
 		break;
 
+	//::::::::::::::::: ABOUT ME :::::::::::::::::::::
+
+	case 'about':
+		include ROOT . "modules/about/index.php";
+		break;
+
+	case 'about/edit-text':
+		include ROOT . "modules/about/edit-text.php";
+		break;
+
+	case 'about/edit-skills':
+		include ROOT . "modules/about/edit-skills.php";
+		break;
+
+	case 'about/edit-jobs':
+		include ROOT . "modules/about/edit-jobs.php";
+		break;
+
+	case 'about/job-item-edit':
+		include ROOT . "modules/about/job-item-edit.php";
+		break;
+
+	case 'about/job-item-delete':
+		include ROOT . "modules/about/job-item-delete.php";
+		break;
+
 	//::::::::::::::::: MAIN / OTHER :::::::::::::::::::::
 
 	default:

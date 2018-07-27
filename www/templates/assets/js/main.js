@@ -6,7 +6,7 @@ $(document).ready(function() {
 	var validateForm = (function(){
 
 		var _form = $('#validate-form');
-		var _input = _form.find('input[data-required="required"], textarea[data-required="required"]');
+		var _input = _form.find('input, textarea');
 
 		var init = function(){
 			_setUpListeners();
@@ -23,11 +23,11 @@ $(document).ready(function() {
 			$.each(_input, function(index, val){
 				var input = $(val),
 				value = input.val().trim(),
-				textError = input.attr('data-text-error').toLowerCase(),
+				textError = input.attr('data-text-error'),
 				errorMsg = $('<div class="error"><div class="error__title">Введите ' + textError + '</div></div>'),
 				pattern = /^([a-z0-9_\.-])+@[a-z0-9-]+\.([a-z]{2,4}\.)?[a-z]{2,4}$/i;
 
-				if (value.length === 0) {
+				if (input.attr('data-required') === 'required' && value.length === 0) {
 					e.preventDefault();
 					input.next('.error').slideUp(500, function(){$(this).remove()});
 					errorMsg.insertAfter(input).hide().slideDown(500);
@@ -40,7 +40,7 @@ $(document).ready(function() {
 						errorMsg = $('<div class="error"><div class="error__title">Неверный формат ' + textError + '</div></div>');
 						errorMsg.insertAfter(input).hide().slideDown(500);
 					}
-				} 	
+				}
 
 				input.on('focus', function(){
 					input.next('.error').slideUp(500, function(){$(this).remove()});

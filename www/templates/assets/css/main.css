@@ -143,6 +143,9 @@ body {
 .avatar {
   overflow: hidden;
   background: url(..//img/paceholders/avatar-placeholder-big.jpg);
+  -webkit-background-size: cover;
+  background-size: cover;
+  background-position: center;
   width: 205px;
   height: 205px;
   border-radius: 205px;
@@ -1478,7 +1481,7 @@ a.header-admin__name {
   margin-right: auto;
   margin-left: auto;
 }
-.resume .title-1 {
+.resume--text .title-1 {
   color: #037ec6;
 }
 .resume p {
@@ -1499,73 +1502,6 @@ a.header-admin__name {
   font-size: 24px;
   font-weight: 900;
   text-align: center;
-}
-.skill-wrap {
-  display: inline-block;
-  margin-right: 55px;
-}
-.skill-wrap:last-child {
-  margin-right: 0;
-}
-.skill__circle {
-  width: 112px;
-  height: 112px;
-  border-radius: 50%;
-  overflow: hidden;
-  position: relative;
-  display: -webkit-box;
-  display: -ms-flexbox;
-  display: flex;
-  -webkit-box-pack: center;
-  -ms-flex-pack: center;
-  justify-content: center;
-  -webkit-box-align: center;
-  -ms-flex-align: center;
-  align-items: center;
-}
-.skill__circle:before {
-  content: '';
-  position: absolute;
-  top: 10px;
-  left: 10px;
-  right: 10px;
-  bottom: 10px;
-  border-radius: 50%;
-  background-color: #222222;
-  z-index: 1;
-}
-.skill__circle:after {
-  content: '';
-  display: inline-block;
-  position: absolute;
-  top: 0;
-  left: 0;
-  right: 0;
-  bottom: 0;
-  border-right: 50%;
-}
-.skill__circle--green:after {
-  background-image: -webkit-linear-gradient(40deg, #3aaa35 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #3aaa35 50%, transparent 50%, transparent);
-  background-image: -o-linear-gradient(40deg, #3aaa35 50%, transparent 50%, transparent), -o-linear-gradient(right, #3aaa35 50%, transparent 50%, transparent);
-  background-image: linear-gradient(50deg, #3aaa35 50%, transparent 50%, transparent), linear-gradient(270deg, #3aaa35 50%, transparent 50%, transparent);
-}
-.skill__circle--blue:after {
-  background-image: -webkit-linear-gradient(40deg, #009cf5 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #009cf5 50%, transparent 50%, transparent);
-  background-image: -o-linear-gradient(40deg, #009cf5 50%, transparent 50%, transparent), -o-linear-gradient(right, #009cf5 50%, transparent 50%, transparent);
-  background-image: linear-gradient(50deg, #009cf5 50%, transparent 50%, transparent), linear-gradient(270deg, #009cf5 50%, transparent 50%, transparent);
-}
-.skill__circle--yellow:after {
-  background-image: -webkit-linear-gradient(40deg, #ffcc00 50%, transparent 50%, transparent), -webkit-linear-gradient(right, #ffcc00 50%, transparent 50%, transparent);
-  background-image: -o-linear-gradient(40deg, #ffcc00 50%, transparent 50%, transparent), -o-linear-gradient(right, #ffcc00 50%, transparent 50%, transparent);
-  background-image: linear-gradient(50deg, #ffcc00 50%, transparent 50%, transparent), linear-gradient(270deg, #ffcc00 50%, transparent 50%, transparent);
-}
-.skill__name {
-  z-index: 2;
-  font-size: 20px;
-  font-weight: 900;
-}
-.skill__name--smaller {
-  font-size: 16px;
 }
 .experience__period {
   font-size: 16px;
@@ -1697,8 +1633,6 @@ a.header-admin__name {
 .edit-about-me .avatar {
   width: 85px;
   height: 85px;
-  margin-top: 15px;
-  margin-bottom: 35px;
 }
 .edit-about-me .input {
   margin-bottom: 20px;
