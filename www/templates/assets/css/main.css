@@ -1221,7 +1221,7 @@ fieldset {
 }
 .header-bg {
   height: 200px;
-  background-image: url('../../img/bg/header-bg-1.jpg');
+  background-image: url('../img/bg/header-bg-1.jpg');
   background-repeat: no-repeat;
   background-position: center;
   background-size: cover;

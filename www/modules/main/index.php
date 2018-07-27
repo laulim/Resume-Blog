@@ -1,5 +1,8 @@
 <?php 
+$title = "Главная";
 
+$about = R::load('about', 1);
+$posts = R::find('posts', 'ORDER BY id DESC LIMIT 3');
 
 // Готовим контент для центральной части
 ob_start();
