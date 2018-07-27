@@ -427,6 +427,8 @@ input.button {
   font-weight: 900;
   margin-right: 15px;
   color: #383737;
+  text-decoration: none;
+  
 }
 .comment__related-to,
 a.comment__related-to {

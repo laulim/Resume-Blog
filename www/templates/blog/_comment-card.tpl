@@ -6,15 +6,24 @@
 				title="<?=$comment['firstname']?> <?=$comment['lastname']?>" />
 		<?php } ?>
 	</div>
+	<?php if (isAdmin()): ?>
+	<a class="button button--delete button--small" href="<?HOST?>post/comment-delete?comment_id=<?=$comment['id']?>&post_id=<?=$post['id']?>">Удалить</a>
+	<?php endif ?>
 	<div class="comment__content">
 		<div class="comment__header">
-			<div class="comment__user-name">
+			<a 
+				<?php if ($comment['user_id'] == $_SESSION['logged_user']['id']) { ?>
+					href="<?=HOST?>profile" 
+				<?php } else { ?>
+					href="<?=HOST?>user-profile?id=<?=$comment['user_id']?>" 
+				<?php } ?>
+				class="comment__user-name">
 				<?php if ($comment['firstname'] != '' || $comment['lastname'] != '') {
 					echo $comment['firstname'] . " " . $comment['lastname'];
 				} else {
 					echo $comment['email'];
 				}?>
-			</div>
+			</a>
 			<div class="comment__date"><i class="far fa-clock"></i>
 				 <?=rus_date("j F Y H:i", strtotime($comment['date_time']))?>
 			</div>
@@ -23,4 +32,5 @@
 			<?=$comment['text']?>
 		</p>
 	</div>
+
 </div>

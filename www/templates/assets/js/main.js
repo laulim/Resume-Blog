@@ -54,13 +54,13 @@ $(document).ready(function() {
 	validateForm.init();
 
 	//:::::::: DELETE AVATAR ::::::::::
-	var deleteAvatar = $('#enter-form').find('#delete-avatar');
+	var deleteAvatar = $('#validate-form').find('#delete-avatar');
 	deleteAvatar.on('click', function(){
 		if ($(deleteAvatar).is(':checked')) {
-			$('#enter-form').find('.file-upload__thumb-delete').fadeIn();	
+			$('#validate-form').find('.file-upload__thumb-delete').fadeIn();	
 			deleteAvatar.next('span').text('Не удалять');
 		} else {
-			$('#enter-form').find('.file-upload__thumb-delete').fadeOut();
+			$('#validate-form').find('.file-upload__thumb-delete').fadeOut();
 			deleteAvatar.next('span').text('Удалить');
 		}
 	})

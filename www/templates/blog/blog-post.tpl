@@ -25,10 +25,12 @@
 					<a class="blog-post__info-item blog-post__info-item--name">
 						<?=$post['firstname']?> <?=$post['lastname']?>
 					</a>
-
+					
+					<?php if ($post['cat_title'] != ''): ?>
 					<a class="blog-post__info-item blog-post__info-item--tag">
 						<?=$post['cat_title']?>
 					</a>
+					<?php endif ?>
 
 					<span class="blog-post__info-item blog-post__info-item--date">
 						<?=rus_date("j F Y H:i", strtotime($post['date_time']))?>
@@ -79,7 +81,6 @@
 		</div>
 	</div>
 	<div class="row justify-content-center">
-
 		<div class="col-md-10">
 			<?php if (count($comments) > 0) { ?>
 			<div id="comments" class="title-2"><?commentNumber( count($comments) )?></div>

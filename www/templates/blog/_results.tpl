@@ -16,3 +16,9 @@
 	</div>
 <?php endif ?>
 
+<?php if ($_GET['result'] == 'commentDeleted'): ?>
+	<div class="error" data-notify-hide>
+		<div class="error__title">Комментарий был удален</div>
+	</div>
+<?php endif ?>
+
