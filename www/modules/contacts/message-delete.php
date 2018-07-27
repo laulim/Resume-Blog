@@ -11,7 +11,7 @@ $message = R::load('messages', $_GET['id']);
 
 if (isset($_POST['messageDelete'])) {
 	if ($message['message_file'] != '') { 
-		$fileUrl = ROOT . 'usercontent/upload_files/' . $post->post_img; 
+		$fileUrl = ROOT . 'usercontent/upload_files/' . $message['message_file']; 
 		unlink($fileUrl);
 	}
 
