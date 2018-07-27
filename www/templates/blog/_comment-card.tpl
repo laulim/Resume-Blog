@@ -12,7 +12,7 @@
 	<div class="comment__content">
 		<div class="comment__header">
 			<a 
-				<?php if ($comment['user_id'] == $_SESSION['logged_user']['id']) { ?>
+				<?php if ($comment['user_id'] == @$_SESSION['logged_user']['id']) { ?>
 					href="<?=HOST?>profile" 
 				<?php } else { ?>
 					href="<?=HOST?>user-profile?id=<?=$comment['user_id']?>" 
