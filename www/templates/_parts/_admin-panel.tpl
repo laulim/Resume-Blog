@@ -28,6 +28,9 @@
 		<a class="admin-nav__link" href="<?=HOST?>messages"> 
 			<i class="fas fa-envelope link__icon"></i><span>Сообщения</span>
 		</a>
+		<!-- <a class="admin-nav__link" href="<?=HOST?>"> 
+			<i class="fas fa-address-book link__icon"></i><span>Пользователи</span>
+		</a> -->
 	</div>
 	<div class="admin-nav__exit">
 		<a class="admin-nav__link" href="<?=HOST?>logout"> <i class="fas fa-sign-out-alt link__icon"></i><span>Выход</span></a>

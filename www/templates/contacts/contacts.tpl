@@ -103,11 +103,11 @@
 					<fieldset>
 						<legend>
 							<div class="title-8 mb-2">Прикрепить файл</div>
-							<div class="legend__descr mb-10">jpg, png, gif, pdf, doc, весом до 4Мб.</div>
+							<div class="legend__descr">jpg, png, gif, pdf, doc, весом до 4Мб.</div>
 						</legend>
 						<input class="inputfile" id="#file-1" type="file" name="userFile" />
-						<label for="#file-1">Выбрать файл</label>
-						<span>Файл не выбран</span>
+						<label class="mt-10" for="#file-1">Выбрать файл</label>
+						<span class="mt-10">Файл не выбран</span>
 					</fieldset>
 				</div>
 				<input class="button button--save mt-5" type="submit" name="newMessage" value="Отправить" />
