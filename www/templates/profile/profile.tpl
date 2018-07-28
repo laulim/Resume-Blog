@@ -37,32 +37,12 @@
 			</div>
 		</div>
 	</div>
+	<?php if (count($comments) > 0): ?>
+		
 	<div class="title-2">Комментарии пользователя </div>
-	<div class="comment-wrap comment-wrap--no-avatar">
-		<div class="comment__content">
-			<div class="comment__header">
-				<a class="comment__related-to" href="#">Поездка в LA</a>
-				<div class="comment__date"><i class="far fa-clock"></i> 05 Мая 2017 года в 15:45</div>
-			</div>
-			<div class="comment__text">Замечательный парк, обязательно отправлюсь туда этим летом.</div>
-		</div>
-	</div>
-	<div class="comment-wrap comment-wrap--no-avatar">
-		<div class="comment__content">
-			<div class="comment__header">
-				<a class="comment__related-to" href="#">Ноутбук для веб-разработчиков</a>
-				<div class="comment__date"><i class="far fa-clock"></i> 15 Мая 2017 года в 10:02</div>
-			</div>
-			<div class="comment__text">Замечательный парк, обязательно отправлюсь туда этим летом.</div>
-		</div>
-	</div>
-	<div class="comment-wrap comment-wrap--no-avatar">
-		<div class="comment__content"> 
-			<div class="comment__header">
-				<a class="comment__related-to" href="#">Настройка Sublime</a>
-				<div class="comment__date"><i class="far fa-clock"></i> 12 Мая 2017 года в 20:39</div>
-			</div>
-			<div class="comment__text">Замечательный парк, обязательно отправлюсь туда этим летом.</div>
-		</div>
-	</div>
+
+	<?php foreach ($comments as $comment ): 
+		include ROOT . "templates/profile/_user-comments.tpl";
+	 endforeach ?>
+	<?php endif ?>
 </div>
