@@ -9,6 +9,10 @@
 				</strong> 
 				с id = <?=$post['id']?>?
 			</p>
+
+			<pre>
+				<?php print_r($comments); ?>
+			</pre>
 			
 			<form action="<?=HOST?>blog/post-delete?id=<?=$post['id']?>" method="POST"  >
 				<input type="submit" name="postDelete" class="button button--delete button--delete--big mt-20" value="Удалить">
