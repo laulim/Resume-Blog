@@ -15,6 +15,10 @@
 	width: 320px;
 	height: 140px;
 }
+.file-upload__thumb--image {
+	width: 360px;
+	height: 190px;
+}
 
 .file-upload__thumb--about-avatar {
 	width: 250px;

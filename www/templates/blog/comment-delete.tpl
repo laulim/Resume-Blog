@@ -25,7 +25,7 @@
 			</p>
 			
 			<form action="<?=HOST?>blog/post/comment-delete?comment_id=<?=$_GET['comment_id']?>&post_id=<?=$_GET['post_id']?>" method="POST"  >
-				<input type="submit" name="commentDelete" class="button button--delete button--delete--big mt-20" value="Удалить">
+				<input type="submit" name="commentDelete" class="button button--delete mt-20" value="Удалить">
 				<a class="button ml-20" href="<?=HOST?>blog/post?id=<?=$_GET['post_id']?>">Отмена</a>
 			</form>
 

@@ -6,7 +6,7 @@
 			<p>Вы действительно хотите удалить категорию <strong><?=$cat['cat_title']?></strong> с id = <?=$cat['id']?>?</p>
 			
 			<form action="<?=HOST?>blog/category-delete?id=<?=$cat['id']?>" method="POST"  >
-				<input type="submit" name="catDelete" class="button button--delete button--delete--big mt-20" value="Удалить">
+				<input type="submit" name="catDelete" class="button button--delete mt-20" value="Удалить">
 				<a class="button ml-20" href="<?=HOST?>blog/categories">Отмена</a>
 			</form>
 

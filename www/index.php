@@ -148,6 +148,28 @@ switch ($uri[0]) {
 		include ROOT . "modules/about/job-item-delete.php";
 		break;
 
+	//::::::::::::::::: PORTFOLIO :::::::::::::::::::::
+
+	case 'portfolio':
+		include ROOT . "modules/portfolio/index.php";
+		break;
+
+	case 'portfolio/work':
+		include ROOT . "modules/portfolio/work.php";
+		break;
+
+	case 'portfolio/work-new':
+		include ROOT . "modules/portfolio/work-new.php";
+		break;
+
+	case 'portfolio/work-edit':
+		include ROOT . "modules/portfolio/work-edit.php";
+		break;
+
+	case 'portfolio/work-delete':
+		include ROOT . "modules/portfolio/work-delete.php";
+		break;
+
 	//::::::::::::::::: MAIN / OTHER :::::::::::::::::::::
 
 	default:

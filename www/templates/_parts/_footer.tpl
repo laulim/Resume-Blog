@@ -10,7 +10,7 @@
 					<ul class="footer-nav">
 						<li class="footer-nav__item"><a href="<?=HOST?>">Главная</a></li>
 						<li class="footer-nav__item"><a href="<?=HOST?>about">Обо мне</a></li>
-						<!-- <li class="footer-nav__item"><a href="<?=HOST?>portfolio">Работы</a></li> -->
+						<li class="footer-nav__item"><a href="<?=HOST?>portfolio">Работы</a></li>
 						<li class="footer-nav__item"><a href="<?=HOST?>blog">Блог</a></li>
 						<li class="footer-nav__item"><a href="<?=HOST?>contacts">Контакты</a></li>
 					</ul>

@@ -101,8 +101,8 @@ if (isset($_POST['postUpdated'])) {
 			$postImg = $post->post_img;
 			$picUrl = ROOT . 'usercontent/blog/' . $postImg; 
 			unlink($picUrl);
-			$picUrl360 = ROOT . 'usercontent/blog/' . '320-' . $postImg;
-			unlink($picUrl360); 
+			$picUrl320 = ROOT . 'usercontent/blog/' . '320-' . $postImg;
+			unlink($picUrl320); 
 
 			$post->post_img = '';
 			$post->post_img_small = '';

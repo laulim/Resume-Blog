@@ -22,6 +22,15 @@
 <div class="hr-line mb-80 mt-80"></div>
 
 <!-- Работы -->
+<div class="container mb-30">
+	<h1 class="title-1">Новые <a href="<?=HOST?>portfolio">работы</a></h1>
+
+	<div class="row mb-50 mt-20">
+		<?php foreach ($works as $work) { 
+			include ROOT . "templates/_parts/_work-card.tpl";
+		} ?>
+	</div>
+</div>
 
 <div class="container mb-80">
 	<h1 class="title-1 mb-40">Новые записи в <a href="<?=HOST?>blog">блоге</a></h1>

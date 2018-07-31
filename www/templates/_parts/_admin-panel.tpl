@@ -16,7 +16,7 @@
 		<a class="admin-nav__link" href="<?=HOST?>blog/categories"> 
 			<i class="fas fa-folder link__icon"></i><span>Категории</span>
 		</a>
-		<a class="admin-nav__link" href="<?=HOST?>"> 
+		<a class="admin-nav__link" href="<?=HOST?>portfolio/work-new"> 
 			<i class="fas fa-plus-circle link__icon"></i><span>Работа</span>
 		</a>
 		<a class="admin-nav__link" href="<?=HOST?>about"> 
@@ -28,9 +28,6 @@
 		<a class="admin-nav__link" href="<?=HOST?>messages"> 
 			<i class="fas fa-envelope link__icon"></i><span>Сообщения</span>
 		</a>
-		<!-- <a class="admin-nav__link" href="<?=HOST?>"> 
-			<i class="fas fa-address-book link__icon"></i><span>Пользователи</span>
-		</a> -->
 	</div>
 	<div class="admin-nav__exit">
 		<a class="admin-nav__link" href="<?=HOST?>logout"> <i class="fas fa-sign-out-alt link__icon"></i><span>Выход</span></a>
