@@ -5,7 +5,6 @@
 			<?php if (isset($_GET['result'])) {
 				include ROOT . "templates/blog/_results.tpl";
 			} ?>
-
 			<div class="blog-post">
 				<div class="row">
 					<div class="col">
@@ -22,8 +21,16 @@
 				</div>
 
 				<div class="blog-post__info mb-5">
-					<a class="blog-post__info-item blog-post__info-item--name">
+					<a 
+						class="blog-post__info-item blog-post__info-item--name" 
+						<?php if ($post['author_id'] == @$_SESSION['logged_user']['id']) { ?>
+							href="<?=HOST?>profile" 
+						<?php } else { ?>
+							href="<?=HOST?>user-profile?id=<?=$post['author_id']?>" 
+						<?php } ?>
+						/>
 						<?=$post['firstname']?> <?=$post['lastname']?>
+
 					</a>
 					
 					<?php if ($post['cat_title'] != ''): ?>

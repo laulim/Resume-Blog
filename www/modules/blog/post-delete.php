@@ -8,16 +8,18 @@ if (!isAdmin()) {
 $title = "Удалить пост";
 
 $post = R::load('posts', $_GET['id']);
+$comments = R::find('comments', 'post_id = ?', array($post['id']));
 
 if (isset($_POST['postDelete'])) {
 	if ($post->post_img != '') { 
 		$picUrl = ROOT . 'usercontent/blog/' . $post->post_img; 
 		unlink($picUrl);
-		$picUrl360 = ROOT . 'usercontent/blog/' . $post->post_img_small;
-		unlink($picUrl360);
+		$picUrl320 = ROOT . 'usercontent/blog/' . $post->post_img_small;
+		unlink($picUrl320);
 	}
 
 	R::trash($post);
+	R::trashAll($comments);
 	header('Location: ' . HOST . 'blog?result=postDeleted');
 	exit();
 }

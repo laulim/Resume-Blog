@@ -1406,15 +1406,6 @@ a.header-admin__name {
   margin-left: 100px;
   margin-bottom: 100px;
 }
-.single-work-title {
-  position: relative;
-}
-.single-work-title .button {
-  position: absolute;
-  top: 0;
-  right: 0;
-  z-index: 1;
-}
 .single-work-title__title {
   font-size: 36px;
   font-weight: 900;
@@ -1436,7 +1427,6 @@ a.header-admin__name {
   color: #037EC6;
 }
 .single-work-title__img {
-  display: block;
   width: 100%;
   height: auto;
   background-color: #d5ebff;
@@ -1462,9 +1452,16 @@ a.header-admin__name {
 }
 .single-work-desc ul li {
   margin-bottom: 16px;
+  margin-left: 10px;
+  position: relative;
 }
 .single-work-desc ul li:before {
   display: none;
+}
+.single-work-desc ul li:after {
+  content: '\2022';
+  position: absolute;
+  left: -10px;
 }
 .single-work-buttons {
   display: -webkit-box;
