@@ -1,5 +1,5 @@
-<aside>
-	<h1>Sidebar</h1>
-</aside>
+<body class="home-page sticky-footer">
 
-<?php echo $content; ?>
+<div class="page-content">
+	<?php echo $content; ?>
+</div>

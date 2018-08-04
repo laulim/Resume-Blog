@@ -1,0 +1,233 @@
+.error--success .error__title {
+	background-color: #168A16;
+	background: -webkit-gradient(linear, left top, left bottom, from(#4A8B4A), to(#1B621B));
+	background: -webkit-linear-gradient(top, #4A8B4A, #1B621B);
+	background: -o-linear-gradient(top, #4A8B4A, #1B621B);
+	background: linear-gradient(top, #4A8B4A, #1B621B);
+}
+
+.file-upload__thumb--avatar {
+	width: 222px;
+	height: 222px;
+}
+
+.file-upload__thumb--post-img {
+	width: 320px;
+	height: 140px;
+}
+.file-upload__thumb--image {
+	width: 360px;
+	height: 190px;
+}
+
+.file-upload__thumb--about-avatar {
+	width: 250px;
+	border-radius: 85px;
+	background-color: transparent;
+}
+.file-upload__thumb--about-avatar .button--delete {
+	right: 40px;
+	top: 10px;
+}
+
+.file-upload__thumb-delete {
+	background-color: rgba(53, 45, 45, 0.7);
+	color: #D7D2D2;
+	font-size: 20px;
+	font-weight: 700;
+	line-height: 2;
+	padding-top: 30px;
+	border-radius: 4px;
+	position: absolute;
+	top: 0;
+	bottom: 0;
+	right: 0;
+	left: 0;
+
+	display: none;
+
+	-webkit-transition: display 0.3s ease-in;
+	-o-transition: display 0.3s ease-in;
+	transition: display 0.3s ease-in;
+}
+
+.file-upload__thumb--about-avatar .file-upload__thumb-delete {
+	background-color: transparent;
+	color: #acb6bb;
+	font-size: 16px;
+	font-weight: 700;
+	line-height: 1;
+	padding-top: 42px;
+	left: 75px;
+	right: 20px;
+}
+
+.file-upload__thumb-delete--small {
+	padding-top: 15px;
+}
+
+.button--small {
+	height: 2em;
+	padding-top: 5px;
+	font-size: 14px;
+}
+
+.select-list {
+	display: block;
+	width: 16em;
+	height: 2em;
+	overflow: hidden;
+	position: relative;
+
+}
+
+.select-list:after {
+	content: '\25BC';
+	position: absolute;
+	top: 7px;
+	right: 0;
+	bottom: 0;
+	padding: 0 1em;
+	pointer-events: none;
+	color: #999999;
+	-webkit-transition: color 0.3s ease-in-out;
+	-o-transition: color 0.3s ease-in-out;
+	transition: color 0.3s ease-in-out;
+}
+
+.select-list:hover:after {
+	color: #34495e;
+}
+
+.select-list--select {
+	-webkit-appearance: none;
+	-moz-appearance: none;
+	appearance: none;
+	box-shadow: none;
+	display: block;
+	width: 16em;
+	height: 2em;
+	border-radius: 4px;
+	overflow: hidden;
+	cursor: pointer;
+	margin: 0;
+	padding: 0 0 0 0.5em;
+	border: 1px solid #B1BFC7;
+	-webkit-transition: all 0.3s ease-in-out;
+	-o-transition: all 0.3s ease-in-out;
+	transition: all 0.3s ease-in-out;
+}
+
+.select-list--select:hover,
+.select-list--select:active,
+.select-list--select:focus {
+	border: 1px solid #999999;
+}
+
+html, body {
+	height: 100% !important; 
+}
+
+body::before {
+	content: ;
+	display: none;
+}
+
+.sticky-footer {
+	display: -webkit-flex;
+	display: -moz-flex;
+	display: -ms-flex;
+	display: -o-flex;
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+}
+
+.button--off {
+	cursor: default;
+	color: #DEE8EE;
+}
+
+.button--off:hover,
+.button--off:focus {
+	border-color: #DEE8EE;
+	background-color: #fff;
+}
+
+.button--off:active {
+	border-color: #DEE8EE;
+	background-color: #fff;
+}
+
+.comment-wrap .button--delete {
+	position: absolute;
+	top: 19px;
+	right: 19px;
+}
+
+.about-text > h1, 
+.about-text > h2, 
+.about-text > h3,
+.about-text > h4,
+.about-text > h5,
+.about-text > h6 {
+	margin-bottom: 0.3em;
+}
+
+.input--number::-webkit-inner-spin-button,
+.input--number::-webkit-outer-spin-button {
+	-webkit-appearance: none;
+    -moz-appearance: none;
+    -moz-appearance: textfield;
+    appearance: none;
+    margin: 0;
+}
+
+
+/* :::::::::::::::::::: INDUCATOR ::::::::::::::::::*/
+
+.indicator {
+	display: inline-block;
+	margin-right: 55px;
+	position: relative;
+}
+.indicator:last-child {
+	margin-right: 0;
+}
+.indicator__value {
+	position: absolute;
+	left: 50%;
+	top: 50%;
+	font-size: 20px;
+	font-weight: 900;
+	transform: translate(-50%, -50%);
+}
+
+.indicator__value--small {
+	font-size: 16px;
+}
+.circle__bg {
+	fill: transparent;
+	stroke-width: 10px;
+	stroke: rgba(226, 226, 226, 0.05);
+}
+
+.circle__indicator {
+	fill: transparent;
+	stroke-width: 10px;
+	stroke: rgba(255, 255, 255, 0.5);
+	transform-origin: center;
+	transform: rotate(-90deg);
+}
+
+.circle__indicator--green {
+	stroke: #3aaa35;
+}
+.circle__indicator--blue {
+	stroke: #009cf5;
+}
+.circle__indicator--yellow {
+	stroke: #ffcc00;
+}
+
+/* :::::::::::::::::::: // INDUCATOR ::::::::::::::::::*/
